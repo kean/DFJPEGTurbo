@@ -13,113 +13,44 @@
 #import "DFJPEGTurbo.h"
 #import "turbojpeg.h"
 
-static inline CGFloat
-_dwarf_jpegturbo_aspect_fit_scale(CGSize imageSize, CGSize boundsSize) {
-    CGFloat scaleWidth = boundsSize.width / imageSize.width;
-    CGFloat scaleHeight = boundsSize.height / imageSize.height;
-    return MIN(scaleWidth, scaleHeight);
-}
-
-static inline CGFloat
-_dwarf_jpegturbo_aspect_fill_scale(CGSize imageSize, CGSize boundsSize) {
-    CGFloat scaleWidth = boundsSize.width / imageSize.width;
-    CGFloat scaleHeight = boundsSize.height / imageSize.height;
-    return MAX(scaleWidth, scaleHeight);
-}
-
-static inline tjscalingfactor
-_dwarf_best_scaling_factor(int width, int height, CGSize desiredSize, DFJPEGTurboScalingMode scaling, DFJPEGTurboRoundingMode rounding) {
-    tjscalingfactor scalingFactor = { .num = 1, .denom = 1 };
-    
-    CGFloat scale; // Scaling factor that exactly matches bounds and scaling mode.
-    CGSize imageSize = CGSizeMake(width, height);
-    switch (scaling) {
-        case DFJPEGTurboScalingModeAspectFit:
-            scale = _dwarf_jpegturbo_aspect_fit_scale(imageSize, desiredSize);
-            break;
-        case DFJPEGTurboScalingModeAspectFill:
-            scale = _dwarf_jpegturbo_aspect_fill_scale(imageSize, desiredSize);
-            break;
-        case DFJPEGTurboScalingModeNone:
-        default:
-            scale = 1.0;
-            break;
-    }
-    
-    if (scale >= 1.0) {
-        return scalingFactor; // Scaling factor can't be greater than 1.0.
-    }
-    
-    int desiredWidth = width * scale;
-    int pickedWidth = width;
-    
-    // Compute best scaling factors for requirements.
-    int num;
-    tjscalingfactor *factors = tjGetScalingFactors(&num);
-    for (int i = 0; i < num; i++) {
-        tjscalingfactor factor = factors[i];
-        int scaledWidth = TJSCALED(width, factor);
-        int widthDiff = abs(desiredWidth - scaledWidth);
-        int pickedWidthDiff = abs(desiredWidth - pickedWidth);
-        
-        if (widthDiff < pickedWidthDiff) {
-            switch (rounding) {
-                case DFJPEGTurboRoundingModeCeil:
-                    if (scaledWidth >= desiredWidth) {
-                        pickedWidth = scaledWidth;
-                        scalingFactor = factor;
-                    }
-                    break;
-                case DFJPEGTurboRoundingModeFloor:
-                    if (scaledWidth <= desiredWidth) {
-                        pickedWidth = scaledWidth;
-                        scalingFactor = factor;
-                    }
-                    break;
-                case DFJPEGTurboRoundingModeRound:
-                    pickedWidth = scaledWidth;
-                    scalingFactor = factor;
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
-    
-    return scalingFactor;
-}
-
-
-@implementation DFJPEGTurbo
-
-static void _dwarf_jpegturbo_release_data (void *info, const void *data, size_t size) {
+static void
+_dwarf_jpeg_release_data(void *info, const void *data, size_t size) {
     free(info);
 }
 
+static inline DFJPEGScale
+_dwarf_scaling_factor_to_scale(tjscalingfactor factor) {
+    return (DFJPEGScale){ .numenator = factor.num, .denominator = factor.denom };
+}
+
+static inline CGFloat
+_scale_for_factor(DFJPEGScale factor) {
+    return factor.numenator / ((CGFloat)factor.denominator);
+}
+
+@implementation DFJPEGTurbo
+
 #pragma mark - Decompression
 
-+ (UIImage *)jpegImageWithData:(NSData *)data {
-    return [self jpegImageWithData:data
-                       orientation:UIImageOrientationUp
-                       desiredSize:CGSizeZero
-                           scaling:DFJPEGTurboScalingModeNone
-                          rounding:0];
++ (UIImage *)imageWithData:(NSData *)data {
+    return [self imageWithData:data orientation:UIImageOrientationUp];
 }
 
-+ (UIImage *)jpegImageWithData:(NSData *)data
-                   orientation:(UIImageOrientation)orientation {
-    return [self jpegImageWithData:data
-                       orientation:orientation
-                       desiredSize:CGSizeZero
-                           scaling:DFJPEGTurboScalingModeNone
-                          rounding:0];
++ (UIImage *)imageWithData:(NSData *)data orientation:(UIImageOrientation)orientation {
+    return [self imageWithData:data orientation:orientation scale:1.f rounding:0];
 }
 
-+ (UIImage *)jpegImageWithData:(NSData *)data
-                   orientation:(UIImageOrientation)orientation
-                   desiredSize:(CGSize)desiredSize
-                       scaling:(DFJPEGTurboScalingMode)scaling
-                      rounding:(DFJPEGTurboRoundingMode)rounding {
++ (UIImage *)imageWithData:(NSData *)data
+               orientation:(UIImageOrientation)orientation
+                     scale:(CGFloat)scale
+                  rounding:(DFJPEGRoundingMode)rounding {
+    DFJPEGScale jpegScale = [self scalingFactorForScale:scale roundingMode:rounding];
+    return [self imageWithData:data orientation:orientation scale:jpegScale];
+}
+
++ (UIImage *)imageWithData:(NSData *)data
+               orientation:(UIImageOrientation)orientation
+                     scale:(DFJPEGScale)scale {
     if (!data) {
         return nil;
     }
@@ -136,11 +67,9 @@ static void _dwarf_jpegturbo_release_data (void *info, const void *data, size_t 
         return nil;
     }
     
-    if (scaling != DFJPEGTurboScalingModeNone) {
-        tjscalingfactor factor = _dwarf_best_scaling_factor(width, height, desiredSize, scaling, rounding);
-        width = TJSCALED(width, factor);
-        height = TJSCALED(height, factor);
-    }
+    tjscalingfactor tjfactor = (tjscalingfactor){ .num = scale.numenator, .denom = scale.denominator };
+    width = TJSCALED(width, tjfactor);
+    height = TJSCALED(height, tjfactor);
     
     int pitch = width * 4;
     size_t capacity = height * pitch;
@@ -153,7 +82,7 @@ static void _dwarf_jpegturbo_release_data (void *info, const void *data, size_t 
         return nil;
     }
     
-    CGDataProviderRef imageDataProvider = CGDataProviderCreateWithData(imageData, imageData, capacity, &_dwarf_jpegturbo_release_data);
+    CGDataProviderRef imageDataProvider = CGDataProviderCreateWithData(imageData, imageData, capacity, &_dwarf_jpeg_release_data);
     
     CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
     CGImageRef image = CGImageCreate(width, height, 8, 32, pitch, colorspace, kCGBitmapByteOrderDefault | kCGImageAlphaNoneSkipLast, imageDataProvider, NULL, NO, kCGRenderingIntentDefault);
@@ -168,6 +97,64 @@ static void _dwarf_jpegturbo_release_data (void *info, const void *data, size_t 
     tjDestroy(decoder);
     
     return decompressedImage;
+}
+
+#pragma mark - Scaling Factors
+
++ (DFJPEGScale)scalingFactorForScale:(CGFloat)scale roundingMode:(DFJPEGRoundingMode)roundingMode {
+    NSAssert(scale >= 0.f, @"Scale must be positive");
+    if (scale < 0.f || scale >= 1.f) {
+        return DFJPEGScaleMake(1, 1);
+    }
+    NSUInteger count;
+    DFJPEGScale *factors = [self scalingFactors:&count];
+    DFJPEGScale outFactor = DFJPEGScaleMake(1, 1);
+    for (int i = 0; i < count; i++) {
+        DFJPEGScale factor = factors[i];
+        CGFloat factorScale = _scale_for_factor(factor);
+        if (fabsf(scale - factorScale) >=
+            fabsf(scale - _scale_for_factor(outFactor))) {
+            continue;
+        }
+        switch (roundingMode) {
+            case DFJPEGRoundingModeLessOrEqual:
+                if (factorScale <= scale) {
+                    outFactor = factor;
+                }
+                break;
+            case DFJPEGRoundingModeGreaterOrEqual:
+                if (factorScale >= scale) {
+                    outFactor = factor;
+                }
+                break;
+            case DFJPEGRoundingModeNearest:
+                outFactor = factor;
+                break;
+            default:
+                break;
+        }
+    }
+    return outFactor;
+}
+
++ (DFJPEGScale *)scalingFactors:(NSUInteger *)count {
+    static DFJPEGScale *_factors;
+    static NSUInteger _count;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        int count;
+        tjscalingfactor *factors = tjGetScalingFactors(&count);
+        _factors = calloc(sizeof(DFJPEGScale), count);
+        for (int i = 0; i < count; i++) {
+            tjscalingfactor factor = factors[i];
+            _factors[i] = _dwarf_scaling_factor_to_scale(factor);
+        }
+        _count = count;
+    });
+    if (count) {
+        *count = _count;
+    }
+    return _factors;
 }
 
 @end

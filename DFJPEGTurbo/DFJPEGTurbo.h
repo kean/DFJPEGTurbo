@@ -10,20 +10,24 @@
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-typedef NS_ENUM(NSUInteger, DFJPEGTurboScalingMode) {
-    DFJPEGTurboScalingModeNone,       // Do not scale
-    DFJPEGTurboScalingModeAspectFit,  // Scale image to fit size
-    DFJPEGTurboScalingModeAspectFill  // Scale image to fill size
+typedef NS_ENUM(NSUInteger, DFJPEGRoundingMode) {
+    /* Pick the closest scale. */
+    DFJPEGRoundingModeNearest,
+    /* Pick the closest scale that is greater than or equal to the input scale. */
+    DFJPEGRoundingModeGreaterOrEqual,
+    /* Pick the closest scale that is less than or equal to the input scale. */
+    DFJPEGRoundingModeLessOrEqual
 };
 
-typedef NS_ENUM(NSUInteger, DFJPEGTurboRoundingMode) {
-    /*! Scaled image width >= desired image width. */
-    DFJPEGTurboRoundingModeFloor,
-    /*! Scaled image width <= desired image width. */
-    DFJPEGTurboRoundingModeCeil,
-    /*! Scaled image width is as close to the desired size as possible. */
-    DFJPEGTurboRoundingModeRound
-};
+typedef struct {
+    NSUInteger numenator;
+    NSUInteger denominator;
+} DFJPEGScale;
+
+static inline DFJPEGScale
+DFJPEGScaleMake(NSUInteger numenator, NSUInteger denominator) {
+    return (DFJPEGScale){ .numenator = numenator, .denominator = denominator };
+}
 
 /*! Objective-C libjpeg-turbo wrapper.
  */
@@ -31,19 +35,50 @@ typedef NS_ENUM(NSUInteger, DFJPEGTurboRoundingMode) {
 
 #pragma mark - Decompression
 
-/*! Decompresses JPEG image data. Returns nil if input data is not in JPEG format.
+/*! Decompresses JPEG image data.
+ @param data JPEG image data.
+ @param orientation Output image orientation.
+ @param scale Scale to be apply to the image during decompression.
+ @warning Scale must be implemented by libjpeg-turbo which supports only several predifined scaling factors (1/1, 1/2, 1/4 etc). In other case the image is going to be cropped.
+ */
++ (UIImage *)imageWithData:(NSData *)data
+               orientation:(UIImageOrientation)orientation
+                     scale:(DFJPEGScale)scale;
+
+/*! Decompresses JPEG image data.
+ @param data JPEG image data.
+ @param orientation Output image orientation.
+ @param scale Scale to be apply to the image during decompression.
+ @param rounding libjpeg-turbo only supports several predefined scaling factors (1/1, 1/2, 1/4 etc). The rounding mode is a way to specify which one to pick if the input scale is not on the list.
+ */
++ (UIImage *)imageWithData:(NSData *)data
+               orientation:(UIImageOrientation)orientation
+                     scale:(CGFloat)scale
+                  rounding:(DFJPEGRoundingMode)rounding;
+
+/*! Decompresses JPEG image data.
  @param data JPEG image data.
  @param orientation Image orientation of image data.
- @param desiredSize Desired image size. Original image is returned if desired size is CGSizeZero.
- @discussion Scaling: libjpeg-turbo supports several scaling factors (0.5, 0.25, 0.125 etc). There is no way to get image the exact disired size you want. There are multiple options (scaling & rounding) to define the algorithm to pick scaling factor.
  */
-+ (UIImage *)jpegImageWithData:(NSData *)data
-                   orientation:(UIImageOrientation)orientation
-                   desiredSize:(CGSize)desiredSize
-                       scaling:(DFJPEGTurboScalingMode)scaling
-                      rounding:(DFJPEGTurboRoundingMode)rounding;
++ (UIImage *)imageWithData:(NSData *)data;
 
-+ (UIImage *)jpegImageWithData:(NSData *)data;
-+ (UIImage *)jpegImageWithData:(NSData *)data orientation:(UIImageOrientation)orientation;
+/*! Decompresses JPEG image data.
+ @param data JPEG image data.
+ @param orientation Image orientation of image data.
+ */
++ (UIImage *)imageWithData:(NSData *)data orientation:(UIImageOrientation)orientation;
+
+#pragma mark - Scaling Factors
+
+/*! Returns the scaling factors closest to the input scale. libjpeg-turbo only supports several predefined scaling factors (1/1, 1/2, 1/4 etc).
+ @param scale Scale to be apply to the image during decompression.
+ @param rounding The rounding mode is a way to specify which predifined scaling factor to pick if the input scale is not on the list.
+ */
++ (DFJPEGScale)scalingFactorForScale:(CGFloat)scale roundingMode:(DFJPEGRoundingMode)roundingMode;
+
+/*! Returns the list of all scaling factors provided by libjpeg-turbo.
+ @return pointer to a static C array.
+ */
++ (DFJPEGScale *)scalingFactors:(NSUInteger *)count;
 
 @end
