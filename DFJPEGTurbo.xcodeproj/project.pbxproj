@@ -528,6 +528,7 @@
 				0CFF94A218BFC2970027EBBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CFF94A318BFC2970027EBBA /* Build configuration list for PBXNativeTarget "DFJPEGTurboTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +537,7 @@
 				0CFF94A518BFC2970027EBBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
