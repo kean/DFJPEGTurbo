@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CA6AC1D18CE55DC00EC0D63 /* sample-01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0CA6AC1C18CE55DC00EC0D63 /* sample-01.jpeg */; };
 		0CFF948118BFC2970027EBBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFF948018BFC2970027EBBA /* Foundation.framework */; };
 		0CFF948618BFC2970027EBBA /* DFJPEGTurbo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CFF948518BFC2970027EBBA /* DFJPEGTurbo.h */; };
 		0CFF948818BFC2970027EBBA /* DFJPEGTurbo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF948718BFC2970027EBBA /* DFJPEGTurbo.m */; };
@@ -48,6 +49,7 @@
 		0C8AC99318CE461900265CB1 /* jmorecfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jmorecfg.h; sourceTree = "<group>"; };
 		0C8AC99418CE461900265CB1 /* jpeglib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jpeglib.h; sourceTree = "<group>"; };
 		0C8AC99518CE461900265CB1 /* turbojpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = turbojpeg.h; sourceTree = "<group>"; };
+		0CA6AC1C18CE55DC00EC0D63 /* sample-01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample-01.jpeg"; sourceTree = "<group>"; };
 		0CFF947D18BFC2970027EBBA /* libDFJPEGTurbo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDFJPEGTurbo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFF948018BFC2970027EBBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CFF948418BFC2970027EBBA /* DFJPEGTurbo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DFJPEGTurbo-Prefix.pch"; path = "../Supporting Files/DFJPEGTurbo-Prefix.pch"; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CA6AC1B18CE55DC00EC0D63 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0CA6AC1C18CE55DC00EC0D63 /* sample-01.jpeg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		0CFF947418BFC2970027EBBA = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				0CFF949C18BFC2970027EBBA /* DFJPEGTurboTests.m */,
+				0CA6AC1B18CE55DC00EC0D63 /* Resources */,
 				0CFF949718BFC2970027EBBA /* Supporting Files */,
 			);
 			path = DFJPEGTurboTests;
@@ -170,9 +181,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0CFF947C18BFC2970027EBBA /* DFJPEGTurbo */ = {
+		0CFF947C18BFC2970027EBBA /* DFJPEGTurbo iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CFF94A018BFC2970027EBBA /* Build configuration list for PBXNativeTarget "DFJPEGTurbo" */;
+			buildConfigurationList = 0CFF94A018BFC2970027EBBA /* Build configuration list for PBXNativeTarget "DFJPEGTurbo iOS" */;
 			buildPhases = (
 				0CFF947918BFC2970027EBBA /* Sources */,
 				0CFF947A18BFC2970027EBBA /* Frameworks */,
@@ -182,14 +193,14 @@
 			);
 			dependencies = (
 			);
-			name = DFJPEGTurbo;
+			name = "DFJPEGTurbo iOS";
 			productName = DFJPEGTurbo;
 			productReference = 0CFF947D18BFC2970027EBBA /* libDFJPEGTurbo.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		0CFF948C18BFC2970027EBBA /* DFJPEGTurboTests */ = {
+		0CFF948C18BFC2970027EBBA /* DFJPEGTurbo Tests iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CFF94A318BFC2970027EBBA /* Build configuration list for PBXNativeTarget "DFJPEGTurboTests" */;
+			buildConfigurationList = 0CFF94A318BFC2970027EBBA /* Build configuration list for PBXNativeTarget "DFJPEGTurbo Tests iOS" */;
 			buildPhases = (
 				0CFF948918BFC2970027EBBA /* Sources */,
 				0CFF948A18BFC2970027EBBA /* Frameworks */,
@@ -200,7 +211,7 @@
 			dependencies = (
 				0CFF949418BFC2970027EBBA /* PBXTargetDependency */,
 			);
-			name = DFJPEGTurboTests;
+			name = "DFJPEGTurbo Tests iOS";
 			productName = DFJPEGTurboTests;
 			productReference = 0CFF948D18BFC2970027EBBA /* DFJPEGTurboTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -226,8 +237,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0CFF947C18BFC2970027EBBA /* DFJPEGTurbo */,
-				0CFF948C18BFC2970027EBBA /* DFJPEGTurboTests */,
+				0CFF947C18BFC2970027EBBA /* DFJPEGTurbo iOS */,
+				0CFF948C18BFC2970027EBBA /* DFJPEGTurbo Tests iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -237,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA6AC1D18CE55DC00EC0D63 /* sample-01.jpeg in Resources */,
 				0CFF949B18BFC2970027EBBA /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +277,7 @@
 /* Begin PBXTargetDependency section */
 		0CFF949418BFC2970027EBBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0CFF947C18BFC2970027EBBA /* DFJPEGTurbo */;
+			target = 0CFF947C18BFC2970027EBBA /* DFJPEGTurbo iOS */;
 			targetProxy = 0CFF949318BFC2970027EBBA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -363,7 +375,7 @@
 					/Users/kean/dev/src/DFJPEGTurbo/DFJPEGTurbo/libturbojpeg,
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DFJPEGTurbo;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -379,7 +391,7 @@
 					/Users/kean/dev/src/DFJPEGTurbo/DFJPEGTurbo/libturbojpeg,
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DFJPEGTurbo;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -434,7 +446,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CFF94A018BFC2970027EBBA /* Build configuration list for PBXNativeTarget "DFJPEGTurbo" */ = {
+		0CFF94A018BFC2970027EBBA /* Build configuration list for PBXNativeTarget "DFJPEGTurbo iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CFF94A118BFC2970027EBBA /* Debug */,
@@ -443,7 +455,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CFF94A318BFC2970027EBBA /* Build configuration list for PBXNativeTarget "DFJPEGTurboTests" */ = {
+		0CFF94A318BFC2970027EBBA /* Build configuration list for PBXNativeTarget "DFJPEGTurbo Tests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CFF94A418BFC2970027EBBA /* Debug */,
