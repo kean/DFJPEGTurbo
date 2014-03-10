@@ -41,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		0C64157F18CE523C00DAA58D /* libDFJPEGTurbo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDFJPEGTurbo.a; path = "../../../../Library/Developer/Xcode/DerivedData/DFJPEGTurbo-grbeapvjgtzvypdcgljqgzyihiyn/Build/Products/Debug-iphoneos/libDFJPEGTurbo.a"; sourceTree = "<group>"; };
+		0CA6AC6718CE618900EC0D63 /* AFInflatedImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFInflatedImage.h; sourceTree = "<group>"; };
 		0CD51AE918CE50C600CF46A1 /* DFJPEGTurboBenchmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DFJPEGTurboBenchmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CD51AEC18CE50C600CF46A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CD51AEE18CE50C600CF46A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -96,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CA6AC6618CE615500EC0D63 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				0CA6AC6718CE618900EC0D63 /* AFInflatedImage.h */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
 		0CD51AE018CE50C600CF46A1 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +185,7 @@
 		0CD51B3218CE510300CF46A1 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				0CA6AC6618CE615500EC0D63 /* AFNetworking */,
 				0CD51B3318CE510300CF46A1 /* DFBenchmark */,
 				0CD51B3618CE510300CF46A1 /* DFImageProcessing */,
 				0CD51B3A18CE510300CF46A1 /* SFWebImageDecoder */,

@@ -22,15 +22,15 @@ DFJPEGScale scale = DFJPEGScaleMake(1, 2); // 0.5 scale
 UIImage *image = [DFJPEGTurbo imageWithData:jpegData orientation:UIImageOrientationDown scale:scale];
 ```
 
-# Benchmarking
+# Benchmark
 
-### Apple A5X
+### Apple A5X (armv7)
 
-| Input Image | SDWebImageDecoder | DFJPEGTurbo | Ratio |
-| ----------- | ----------------- | ----------- | ----- |
-| 2048x1536, 0.25 compression quality | 201.50 ms | 121.24 ms | 1.66 |
-| 2048x1536, 0.50 compression quality | 204.29 ms | 126.75 ms | 1.61 |
-| 2048x1536, 0.75 compression quality | 205.21 ms | 151.43 ms | 1.34 |
+| Input Image | SDWebImage | AFNetworking | DFJPEGTurbo | Avg. Ratio |
+| ----------- | ----------------- | ------------ | ----------- | ---------- |
+| 2048x1536, 0.25 compression quality | 218.29 ms | 214.40 ms | 121.46 ms | 1.78 |
+| 2048x1536, 0.50 compression quality | 234.74 ms | 238.26 ms | 134.55 ms | 1.75 |
+| 2048x1536, 0.75 compression quality | 230.02 ms | 239.85 ms | 154.50 ms | 1.58 |
 
 # Installation
 Current version (0.2.0) can be installed via [Cocoapods](http://cocoapods.org).

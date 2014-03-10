@@ -10,6 +10,7 @@
 #import "DFBenchmark.h"
 #import "DFImageProcessing.h"
 #import "DFJPEGTurbo.h"
+#import "AFInflatedImage.h"
 #import "SDWebImageDecoder.h"
 
 @interface ViewController ()
@@ -28,8 +29,9 @@
     UIImage *image = [UIImage imageWithContentsOfFile:filePath];
     NSArray *images = @[ [DFImageProcessing imageWithImage:image scaledToSize:DFSizeScaled(image.size, 0.5f)], image, [DFImageProcessing imageWithImage:image scaledToSize:DFSizeScaled(image.size, 2.f)]];
     for (UIImage *image in images) {
-        [self _benchmarkWithImage:image compressionQuality:0.33f];
-        [self _benchmarkWithImage:image compressionQuality:0.66f];
+        [self _benchmarkWithImage:image compressionQuality:0.25f];
+        [self _benchmarkWithImage:image compressionQuality:0.5f];
+        [self _benchmarkWithImage:image compressionQuality:0.75f];
         [self _benchmarkWithImage:image compressionQuality:1.f];
     }
 }
@@ -43,6 +45,12 @@
         @autoreleasepool {
             UIImage *image = [UIImage imageWithData:data];
             __attribute__((unused)) UIImage *decodedImage = [UIImage decodedImageWithImage:image];
+        }
+    });
+    NSLog(@"AFNetworking");
+    dwarf_benchmark(YES, ^{
+        @autoreleasepool {
+            __attribute__((unused)) UIImage *decodedImage = AFInflatedImageFromResponseWithDataAtScale(nil, data, [UIScreen mainScreen].scale);
         }
     });
     NSLog(@"DFJPEGTurbo:");
