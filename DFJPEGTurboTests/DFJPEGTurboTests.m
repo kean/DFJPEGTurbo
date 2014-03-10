@@ -20,6 +20,15 @@
 
 @implementation DFJPEGTurboTests
 
+- (void)testDecompression {
+    NSString *filePath = [[NSBundle bundleForClass:[self class] ] pathForResource:@"sample-01" ofType:@"jpeg"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath]; // 2048 x 1536
+    
+    UIImage *image = [DFJPEGTurbo imageWithData:data];
+    XCTAssertTrue(image.size.width == 1024.f);
+    XCTAssertTrue(image.size.height == 768.f);
+}
+
 - (DFJPEGScale *)_mockedScalingFactors:(NSUInteger *)count {
     static DFJPEGScale *factors;
     static dispatch_once_t onceToken;

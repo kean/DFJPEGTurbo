@@ -10,7 +10,7 @@ Objective-C [libjpeg-turbo](http://libjpeg-turbo.virtualgl.org) wrapper (JPEG im
 #### Decompressing JPEG data
 ```objective-c
 NSData *jpegData;
-UIImage *image = [DFJPEGTurbo imageWithData:data orientation:UIImageOrientationDown];
+UIImage *image = [DFJPEGTurbo imageWithData:data];
 ```
 
 #### Decompressing JPEG data with one of the libjpeg-turbo scale factors
