@@ -5,13 +5,16 @@
 #define JPEG_LIB_VERSION 62
 
 /* libjpeg-turbo version */
-#define LIBJPEG_TURBO_VERSION 1.2.0
+#define LIBJPEG_TURBO_VERSION 1.3.0
 
 /* Support arithmetic encoding */
 #define C_ARITH_CODING_SUPPORTED 1
 
 /* Support arithmetic decoding */
 #define D_ARITH_CODING_SUPPORTED 1
+
+/* Support in-memory source/destination managers */
+#define MEM_SRCDST_SUPPORTED 1
 
 /* Compiler supports function prototypes. */
 #define HAVE_PROTOTYPES 1

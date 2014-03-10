@@ -84,7 +84,6 @@
 }
 
 - (void)testPerformance {
-    /*
     NSString *filePath = [[NSBundle bundleForClass:[self class] ] pathForResource:@"sample-01" ofType:@"jpeg"];
     UIImage *image = [UIImage imageWithContentsOfFile:filePath];
     NSArray *images = @[ [DFImageProcessing imageWithImage:image scaledToSize:DFSizeScaled(image.size, 0.5f)], image, [DFImageProcessing imageWithImage:image scaledToSize:DFSizeScaled(image.size, 2.f)]];
@@ -93,7 +92,7 @@
         [self _benchmarkWithImage:image compressionQuality:0.66f];
         [self _benchmarkWithImage:image compressionQuality:1.f];
     }
-     */
+    
 }
 
 - (void)_benchmarkWithImage:(UIImage *)image compressionQuality:(CGFloat)compressionQuality {

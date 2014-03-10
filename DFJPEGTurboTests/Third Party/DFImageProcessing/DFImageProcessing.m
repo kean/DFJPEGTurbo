@@ -59,29 +59,4 @@
     return newImage;
 }
 
-#pragma mark - Decompression
-
-+ (UIImage *)decompressedImageWithData:(NSData *)data orientation:(UIImageOrientation)orientation {
-    if (!data) {
-        return nil;
-    }
-#warning IMAGE DECOMPRESSION NOT IMPLEMENTED
-    //UIImage *image = [DFJPEGTurbo jpegImageWithData:data orientation:orientation];
-    //if (image) {
-    //    return image;
-    //}
-    
-    // Fallback to native methods (not jpeg)
-    UIImage *image = [UIImage imageWithData:data];
-    if (image) {
-        return [UIImage imageWithCGImage:image.CGImage scale:[UIScreen mainScreen].scale orientation:image.imageOrientation];
-    }
-    return nil;
-}
-
-
-+ (UIImage *)decompressedImageWithData:(NSData *)data {
-    return [self decompressedImageWithData:data orientation:UIImageOrientationUp];
-}
-
 @end

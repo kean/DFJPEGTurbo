@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C8AC99918CE46B600265CB1 /* DFImageProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8AC99818CE46B600265CB1 /* DFImageProcessing.m */; };
 		0CFF948118BFC2970027EBBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFF948018BFC2970027EBBA /* Foundation.framework */; };
 		0CFF948618BFC2970027EBBA /* DFJPEGTurbo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CFF948518BFC2970027EBBA /* DFJPEGTurbo.h */; };
 		0CFF948818BFC2970027EBBA /* DFJPEGTurbo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF948718BFC2970027EBBA /* DFJPEGTurbo.m */; };
@@ -19,7 +20,6 @@
 		0CFF94BD18BFC3AA0027EBBA /* libturbojpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFF94B918BFC3AA0027EBBA /* libturbojpeg.a */; };
 		0CFF94C318BFCF350027EBBA /* sample-01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF94C218BFCF350027EBBA /* sample-01.jpeg */; };
 		0CFF94CF18BFCFB80027EBBA /* DFBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF94CE18BFCFB80027EBBA /* DFBenchmark.m */; };
-		0CFF94D418BFCFCF0027EBBA /* DFImageProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF94D318BFCFCF0027EBBA /* DFImageProcessing.m */; };
 		0CFF94D818BFD0A30027EBBA /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF94D718BFD0A30027EBBA /* SDWebImageDecoder.m */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +47,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C8AC99118CE461900265CB1 /* jconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jconfig.h; sourceTree = "<group>"; };
+		0C8AC99218CE461900265CB1 /* jerror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jerror.h; sourceTree = "<group>"; };
+		0C8AC99318CE461900265CB1 /* jmorecfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jmorecfg.h; sourceTree = "<group>"; };
+		0C8AC99418CE461900265CB1 /* jpeglib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jpeglib.h; sourceTree = "<group>"; };
+		0C8AC99518CE461900265CB1 /* turbojpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = turbojpeg.h; sourceTree = "<group>"; };
+		0C8AC99718CE46B600265CB1 /* DFImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFImageProcessing.h; sourceTree = "<group>"; };
+		0C8AC99818CE46B600265CB1 /* DFImageProcessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFImageProcessing.m; sourceTree = "<group>"; };
+		0C8AC99A18CE46D000265CB1 /* DFImageFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFImageFunctions.h; sourceTree = "<group>"; };
 		0CFF947D18BFC2970027EBBA /* libDFJPEGTurbo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDFJPEGTurbo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFF948018BFC2970027EBBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CFF948418BFC2970027EBBA /* DFJPEGTurbo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DFJPEGTurbo-Prefix.pch"; path = "../Supporting Files/DFJPEGTurbo-Prefix.pch"; sourceTree = "<group>"; };
@@ -58,34 +66,10 @@
 		0CFF949818BFC2970027EBBA /* DFJPEGTurboTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DFJPEGTurboTests-Info.plist"; sourceTree = "<group>"; };
 		0CFF949A18BFC2970027EBBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0CFF949C18BFC2970027EBBA /* DFJPEGTurboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFJPEGTurboTests.m; sourceTree = "<group>"; };
-		0CFF94A718BFC3AA0027EBBA /* bmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bmp.h; sourceTree = "<group>"; };
-		0CFF94A818BFC3AA0027EBBA /* cderror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cderror.h; sourceTree = "<group>"; };
-		0CFF94A918BFC3AA0027EBBA /* cdjpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cdjpeg.h; sourceTree = "<group>"; };
-		0CFF94AA18BFC3AA0027EBBA /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
-		0CFF94AB18BFC3AA0027EBBA /* jchuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jchuff.h; sourceTree = "<group>"; };
-		0CFF94AC18BFC3AA0027EBBA /* jconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jconfig.h; sourceTree = "<group>"; };
-		0CFF94AD18BFC3AA0027EBBA /* jdct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jdct.h; sourceTree = "<group>"; };
-		0CFF94AE18BFC3AA0027EBBA /* jdhuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jdhuff.h; sourceTree = "<group>"; };
-		0CFF94AF18BFC3AA0027EBBA /* jerror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jerror.h; sourceTree = "<group>"; };
-		0CFF94B018BFC3AA0027EBBA /* jinclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jinclude.h; sourceTree = "<group>"; };
-		0CFF94B118BFC3AA0027EBBA /* jmemsys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jmemsys.h; sourceTree = "<group>"; };
-		0CFF94B218BFC3AA0027EBBA /* jmorecfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jmorecfg.h; sourceTree = "<group>"; };
-		0CFF94B318BFC3AA0027EBBA /* jpegcomp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jpegcomp.h; sourceTree = "<group>"; };
-		0CFF94B418BFC3AA0027EBBA /* jpegint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jpegint.h; sourceTree = "<group>"; };
-		0CFF94B518BFC3AA0027EBBA /* jpeglib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jpeglib.h; sourceTree = "<group>"; };
-		0CFF94B618BFC3AA0027EBBA /* jsimd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsimd.h; sourceTree = "<group>"; };
-		0CFF94B718BFC3AA0027EBBA /* jsimddct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsimddct.h; sourceTree = "<group>"; };
-		0CFF94B818BFC3AA0027EBBA /* jversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jversion.h; sourceTree = "<group>"; };
 		0CFF94B918BFC3AA0027EBBA /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libturbojpeg.a; sourceTree = "<group>"; };
-		0CFF94BA18BFC3AA0027EBBA /* tjutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tjutil.h; sourceTree = "<group>"; };
-		0CFF94BB18BFC3AA0027EBBA /* transupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transupp.h; sourceTree = "<group>"; };
-		0CFF94BC18BFC3AA0027EBBA /* turbojpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = turbojpeg.h; sourceTree = "<group>"; };
 		0CFF94C218BFCF350027EBBA /* sample-01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample-01.jpeg"; sourceTree = "<group>"; };
 		0CFF94CD18BFCFB80027EBBA /* DFBenchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFBenchmark.h; sourceTree = "<group>"; };
 		0CFF94CE18BFCFB80027EBBA /* DFBenchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFBenchmark.m; sourceTree = "<group>"; };
-		0CFF94D118BFCFCF0027EBBA /* DFImageFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFImageFunctions.h; sourceTree = "<group>"; };
-		0CFF94D218BFCFCF0027EBBA /* DFImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFImageProcessing.h; sourceTree = "<group>"; };
-		0CFF94D318BFCFCF0027EBBA /* DFImageProcessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFImageProcessing.m; sourceTree = "<group>"; };
 		0CFF94D618BFD0A30027EBBA /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
 		0CFF94D718BFD0A30027EBBA /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +98,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C8AC99618CE46B600265CB1 /* DFImageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				0C8AC99A18CE46D000265CB1 /* DFImageFunctions.h */,
+				0C8AC99718CE46B600265CB1 /* DFImageProcessing.h */,
+				0C8AC99818CE46B600265CB1 /* DFImageProcessing.m */,
+			);
+			path = DFImageProcessing;
+			sourceTree = "<group>";
+		};
 		0CFF947418BFC2970027EBBA = {
 			isa = PBXGroup;
 			children = (
@@ -149,7 +143,7 @@
 			children = (
 				0CFF948518BFC2970027EBBA /* DFJPEGTurbo.h */,
 				0CFF948718BFC2970027EBBA /* DFJPEGTurbo.m */,
-				0CFF94A618BFC3AA0027EBBA /* libturbojpeg */,
+				0CFF94A618BFC3AA0027EBBA /* libturbojpeg-1.3.0 */,
 			);
 			path = DFJPEGTurbo;
 			sourceTree = "<group>";
@@ -183,32 +177,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0CFF94A618BFC3AA0027EBBA /* libturbojpeg */ = {
+		0CFF94A618BFC3AA0027EBBA /* libturbojpeg-1.3.0 */ = {
 			isa = PBXGroup;
 			children = (
-				0CFF94A718BFC3AA0027EBBA /* bmp.h */,
-				0CFF94A818BFC3AA0027EBBA /* cderror.h */,
-				0CFF94A918BFC3AA0027EBBA /* cdjpeg.h */,
-				0CFF94AA18BFC3AA0027EBBA /* config.h */,
-				0CFF94AB18BFC3AA0027EBBA /* jchuff.h */,
-				0CFF94AC18BFC3AA0027EBBA /* jconfig.h */,
-				0CFF94AD18BFC3AA0027EBBA /* jdct.h */,
-				0CFF94AE18BFC3AA0027EBBA /* jdhuff.h */,
-				0CFF94AF18BFC3AA0027EBBA /* jerror.h */,
-				0CFF94B018BFC3AA0027EBBA /* jinclude.h */,
-				0CFF94B118BFC3AA0027EBBA /* jmemsys.h */,
-				0CFF94B218BFC3AA0027EBBA /* jmorecfg.h */,
-				0CFF94B318BFC3AA0027EBBA /* jpegcomp.h */,
-				0CFF94B418BFC3AA0027EBBA /* jpegint.h */,
-				0CFF94B518BFC3AA0027EBBA /* jpeglib.h */,
-				0CFF94B618BFC3AA0027EBBA /* jsimd.h */,
-				0CFF94B718BFC3AA0027EBBA /* jsimddct.h */,
-				0CFF94B818BFC3AA0027EBBA /* jversion.h */,
+				0C8AC99118CE461900265CB1 /* jconfig.h */,
+				0C8AC99218CE461900265CB1 /* jerror.h */,
+				0C8AC99318CE461900265CB1 /* jmorecfg.h */,
+				0C8AC99418CE461900265CB1 /* jpeglib.h */,
+				0C8AC99518CE461900265CB1 /* turbojpeg.h */,
 				0CFF94B918BFC3AA0027EBBA /* libturbojpeg.a */,
-				0CFF94BA18BFC3AA0027EBBA /* tjutil.h */,
-				0CFF94BB18BFC3AA0027EBBA /* transupp.h */,
-				0CFF94BC18BFC3AA0027EBBA /* turbojpeg.h */,
 			);
+			name = "libturbojpeg-1.3.0";
 			path = libturbojpeg;
 			sourceTree = "<group>";
 		};
@@ -216,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				0CFF94D518BFD0A30027EBBA /* SFWebImageDecoder */,
-				0CFF94D018BFCFCF0027EBBA /* DFImageProcessing */,
+				0C8AC99618CE46B600265CB1 /* DFImageProcessing */,
 				0CFF94CC18BFCFB80027EBBA /* DFBenchmark */,
 			);
 			path = "Third Party";
@@ -229,16 +208,6 @@
 				0CFF94CE18BFCFB80027EBBA /* DFBenchmark.m */,
 			);
 			path = DFBenchmark;
-			sourceTree = "<group>";
-		};
-		0CFF94D018BFCFCF0027EBBA /* DFImageProcessing */ = {
-			isa = PBXGroup;
-			children = (
-				0CFF94D118BFCFCF0027EBBA /* DFImageFunctions.h */,
-				0CFF94D218BFCFCF0027EBBA /* DFImageProcessing.h */,
-				0CFF94D318BFCFCF0027EBBA /* DFImageProcessing.m */,
-			);
-			path = DFImageProcessing;
 			sourceTree = "<group>";
 		};
 		0CFF94D518BFD0A30027EBBA /* SFWebImageDecoder */ = {
@@ -340,8 +309,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C8AC99918CE46B600265CB1 /* DFImageProcessing.m in Sources */,
 				0CFF94D818BFD0A30027EBBA /* SDWebImageDecoder.m in Sources */,
-				0CFF94D418BFCFCF0027EBBA /* DFImageProcessing.m in Sources */,
 				0CFF949D18BFC2970027EBBA /* DFJPEGTurboTests.m in Sources */,
 				0CFF94CF18BFCFB80027EBBA /* DFBenchmark.m in Sources */,
 			);

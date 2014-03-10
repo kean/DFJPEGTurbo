@@ -67,7 +67,7 @@ _scale_for_factor(DFJPEGScale factor) {
         return nil;
     }
     
-    tjscalingfactor tjfactor = (tjscalingfactor){ .num = scale.numenator, .denom = scale.denominator };
+    tjscalingfactor tjfactor = (tjscalingfactor){ .num = (int)scale.numenator, .denom = (int)scale.denominator };
     width = TJSCALED(width, tjfactor);
     height = TJSCALED(height, tjfactor);
     

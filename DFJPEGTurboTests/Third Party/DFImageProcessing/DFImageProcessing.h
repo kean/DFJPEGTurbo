@@ -24,11 +24,6 @@
 + (UIImage *)imageWithImage:(UIImage *)image aspectFitPixelSize:(CGSize)size;
 + (UIImage *)imageWithImage:(UIImage *)image aspectFillPixelSize:(CGSize)size;
 
-#pragma mark - Decompression
-
-+ (UIImage *)decompressedImageWithData:(NSData *)data;
-+ (UIImage *)decompressedImageWithData:(NSData *)data orientation:(UIImageOrientation)orientation;
-
 @end
 
 
