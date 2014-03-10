@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BD2C4D9C-218C-443D-BF71-34EF6FEF3B99</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DFJPEGTurbo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5301BE9A-45D6-4ACB-BC5D-7A4A20189734</key>
+		<string>https://github.com/kean/DFJPEGTurbo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DFJPEGTurbo.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5301BE9A-45D6-4ACB-BC5D-7A4A20189734</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kean/DFJPEGTurbo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5301BE9A-45D6-4ACB-BC5D-7A4A20189734</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5301BE9A-45D6-4ACB-BC5D-7A4A20189734</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DFJPEGTurbo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

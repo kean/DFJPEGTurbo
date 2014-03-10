@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C64158018CE523C00DAA58D /* libDFJPEGTurbo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C64157F18CE523C00DAA58D /* libDFJPEGTurbo.a */; };
+		0CD51AED18CE50C600CF46A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD51AEC18CE50C600CF46A1 /* Foundation.framework */; };
+		0CD51AEF18CE50C600CF46A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD51AEE18CE50C600CF46A1 /* CoreGraphics.framework */; };
+		0CD51AF118CE50C600CF46A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD51AF018CE50C600CF46A1 /* UIKit.framework */; };
+		0CD51AF718CE50C600CF46A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CD51AF518CE50C600CF46A1 /* InfoPlist.strings */; };
+		0CD51AF918CE50C600CF46A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD51AF818CE50C600CF46A1 /* main.m */; };
+		0CD51AFD18CE50C600CF46A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD51AFC18CE50C600CF46A1 /* AppDelegate.m */; };
+		0CD51B0018CE50C600CF46A1 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CD51AFE18CE50C600CF46A1 /* Main_iPhone.storyboard */; };
+		0CD51B0318CE50C600CF46A1 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CD51B0118CE50C600CF46A1 /* Main_iPad.storyboard */; };
+		0CD51B0618CE50C600CF46A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD51B0518CE50C600CF46A1 /* ViewController.m */; };
+		0CD51B0818CE50C600CF46A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CD51B0718CE50C600CF46A1 /* Images.xcassets */; };
+		0CD51B0F18CE50C600CF46A1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD51B0E18CE50C600CF46A1 /* XCTest.framework */; };
+		0CD51B1018CE50C600CF46A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD51AEC18CE50C600CF46A1 /* Foundation.framework */; };
+		0CD51B1118CE50C600CF46A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD51AF018CE50C600CF46A1 /* UIKit.framework */; };
+		0CD51B1918CE50C600CF46A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CD51B1718CE50C600CF46A1 /* InfoPlist.strings */; };
+		0CD51B1B18CE50C600CF46A1 /* DFJPEGTurboBenchmarkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD51B1A18CE50C600CF46A1 /* DFJPEGTurboBenchmarkTests.m */; };
+		0CD51B3D18CE510300CF46A1 /* DFBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD51B3518CE510300CF46A1 /* DFBenchmark.m */; };
+		0CD51B3E18CE510300CF46A1 /* DFImageProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD51B3918CE510300CF46A1 /* DFImageProcessing.m */; };
+		0CD51B3F18CE510300CF46A1 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD51B3C18CE510300CF46A1 /* SDWebImageDecoder.m */; };
+		0CD51B4218CE516200CF46A1 /* sample-01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0CD51B4118CE516200CF46A1 /* sample-01.jpeg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0CD51B1218CE50C600CF46A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CD51AE118CE50C600CF46A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CD51AE818CE50C600CF46A1;
+			remoteInfo = DFJPEGTurboBenchmark;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C64157F18CE523C00DAA58D /* libDFJPEGTurbo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDFJPEGTurbo.a; path = "../../../../Library/Developer/Xcode/DerivedData/DFJPEGTurbo-grbeapvjgtzvypdcgljqgzyihiyn/Build/Products/Debug-iphoneos/libDFJPEGTurbo.a"; sourceTree = "<group>"; };
+		0CD51AE918CE50C600CF46A1 /* DFJPEGTurboBenchmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DFJPEGTurboBenchmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CD51AEC18CE50C600CF46A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0CD51AEE18CE50C600CF46A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0CD51AF018CE50C600CF46A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0CD51AF418CE50C600CF46A1 /* DFJPEGTurboBenchmark-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DFJPEGTurboBenchmark-Info.plist"; sourceTree = "<group>"; };
+		0CD51AF618CE50C600CF46A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0CD51AF818CE50C600CF46A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0CD51AFA18CE50C600CF46A1 /* DFJPEGTurboBenchmark-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DFJPEGTurboBenchmark-Prefix.pch"; sourceTree = "<group>"; };
+		0CD51AFB18CE50C600CF46A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0CD51AFC18CE50C600CF46A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0CD51AFF18CE50C600CF46A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		0CD51B0218CE50C600CF46A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		0CD51B0418CE50C600CF46A1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0CD51B0518CE50C600CF46A1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0CD51B0718CE50C600CF46A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0CD51B0D18CE50C600CF46A1 /* DFJPEGTurboBenchmarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DFJPEGTurboBenchmarkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CD51B0E18CE50C600CF46A1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0CD51B1618CE50C600CF46A1 /* DFJPEGTurboBenchmarkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DFJPEGTurboBenchmarkTests-Info.plist"; sourceTree = "<group>"; };
+		0CD51B1818CE50C600CF46A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0CD51B1A18CE50C600CF46A1 /* DFJPEGTurboBenchmarkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFJPEGTurboBenchmarkTests.m; sourceTree = "<group>"; };
+		0CD51B3418CE510300CF46A1 /* DFBenchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFBenchmark.h; sourceTree = "<group>"; };
+		0CD51B3518CE510300CF46A1 /* DFBenchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFBenchmark.m; sourceTree = "<group>"; };
+		0CD51B3718CE510300CF46A1 /* DFImageFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFImageFunctions.h; sourceTree = "<group>"; };
+		0CD51B3818CE510300CF46A1 /* DFImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFImageProcessing.h; sourceTree = "<group>"; };
+		0CD51B3918CE510300CF46A1 /* DFImageProcessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFImageProcessing.m; sourceTree = "<group>"; };
+		0CD51B3B18CE510300CF46A1 /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
+		0CD51B3C18CE510300CF46A1 /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		0CD51B4118CE516200CF46A1 /* sample-01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample-01.jpeg"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0CD51AE618CE50C600CF46A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C64158018CE523C00DAA58D /* libDFJPEGTurbo.a in Frameworks */,
+				0CD51AEF18CE50C600CF46A1 /* CoreGraphics.framework in Frameworks */,
+				0CD51AF118CE50C600CF46A1 /* UIKit.framework in Frameworks */,
+				0CD51AED18CE50C600CF46A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CD51B0A18CE50C600CF46A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CD51B0F18CE50C600CF46A1 /* XCTest.framework in Frameworks */,
+				0CD51B1118CE50C600CF46A1 /* UIKit.framework in Frameworks */,
+				0CD51B1018CE50C600CF46A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CD51AE018CE50C600CF46A1 = {
+			isa = PBXGroup;
+			children = (
+				0CD51AF218CE50C600CF46A1 /* DFJPEGTurboBenchmark */,
+				0CD51B3218CE510300CF46A1 /* Third Party */,
+				0CD51B4018CE516200CF46A1 /* Resources */,
+				0CD51B1418CE50C600CF46A1 /* DFJPEGTurboBenchmarkTests */,
+				0CD51AEB18CE50C600CF46A1 /* Frameworks */,
+				0CD51AEA18CE50C600CF46A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0CD51AEA18CE50C600CF46A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CD51AE918CE50C600CF46A1 /* DFJPEGTurboBenchmark.app */,
+				0CD51B0D18CE50C600CF46A1 /* DFJPEGTurboBenchmarkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0CD51AEB18CE50C600CF46A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C64157F18CE523C00DAA58D /* libDFJPEGTurbo.a */,
+				0CD51AEC18CE50C600CF46A1 /* Foundation.framework */,
+				0CD51AEE18CE50C600CF46A1 /* CoreGraphics.framework */,
+				0CD51AF018CE50C600CF46A1 /* UIKit.framework */,
+				0CD51B0E18CE50C600CF46A1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0CD51AF218CE50C600CF46A1 /* DFJPEGTurboBenchmark */ = {
+			isa = PBXGroup;
+			children = (
+				0CD51AFB18CE50C600CF46A1 /* AppDelegate.h */,
+				0CD51AFC18CE50C600CF46A1 /* AppDelegate.m */,
+				0CD51AFE18CE50C600CF46A1 /* Main_iPhone.storyboard */,
+				0CD51B0118CE50C600CF46A1 /* Main_iPad.storyboard */,
+				0CD51B0418CE50C600CF46A1 /* ViewController.h */,
+				0CD51B0518CE50C600CF46A1 /* ViewController.m */,
+				0CD51B0718CE50C600CF46A1 /* Images.xcassets */,
+				0CD51AF318CE50C600CF46A1 /* Supporting Files */,
+			);
+			path = DFJPEGTurboBenchmark;
+			sourceTree = "<group>";
+		};
+		0CD51AF318CE50C600CF46A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0CD51AF418CE50C600CF46A1 /* DFJPEGTurboBenchmark-Info.plist */,
+				0CD51AF518CE50C600CF46A1 /* InfoPlist.strings */,
+				0CD51AF818CE50C600CF46A1 /* main.m */,
+				0CD51AFA18CE50C600CF46A1 /* DFJPEGTurboBenchmark-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0CD51B1418CE50C600CF46A1 /* DFJPEGTurboBenchmarkTests */ = {
+			isa = PBXGroup;
+			children = (
+				0CD51B1A18CE50C600CF46A1 /* DFJPEGTurboBenchmarkTests.m */,
+				0CD51B1518CE50C600CF46A1 /* Supporting Files */,
+			);
+			path = DFJPEGTurboBenchmarkTests;
+			sourceTree = "<group>";
+		};
+		0CD51B1518CE50C600CF46A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0CD51B1618CE50C600CF46A1 /* DFJPEGTurboBenchmarkTests-Info.plist */,
+				0CD51B1718CE50C600CF46A1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0CD51B3218CE510300CF46A1 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				0CD51B3318CE510300CF46A1 /* DFBenchmark */,
+				0CD51B3618CE510300CF46A1 /* DFImageProcessing */,
+				0CD51B3A18CE510300CF46A1 /* SFWebImageDecoder */,
+			);
+			path = "Third Party";
+			sourceTree = "<group>";
+		};
+		0CD51B3318CE510300CF46A1 /* DFBenchmark */ = {
+			isa = PBXGroup;
+			children = (
+				0CD51B3418CE510300CF46A1 /* DFBenchmark.h */,
+				0CD51B3518CE510300CF46A1 /* DFBenchmark.m */,
+			);
+			path = DFBenchmark;
+			sourceTree = "<group>";
+		};
+		0CD51B3618CE510300CF46A1 /* DFImageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				0CD51B3718CE510300CF46A1 /* DFImageFunctions.h */,
+				0CD51B3818CE510300CF46A1 /* DFImageProcessing.h */,
+				0CD51B3918CE510300CF46A1 /* DFImageProcessing.m */,
+			);
+			path = DFImageProcessing;
+			sourceTree = "<group>";
+		};
+		0CD51B3A18CE510300CF46A1 /* SFWebImageDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				0CD51B3B18CE510300CF46A1 /* SDWebImageDecoder.h */,
+				0CD51B3C18CE510300CF46A1 /* SDWebImageDecoder.m */,
+			);
+			path = SFWebImageDecoder;
+			sourceTree = "<group>";
+		};
+		0CD51B4018CE516200CF46A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0CD51B4118CE516200CF46A1 /* sample-01.jpeg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0CD51AE818CE50C600CF46A1 /* DFJPEGTurboBenchmark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CD51B1E18CE50C600CF46A1 /* Build configuration list for PBXNativeTarget "DFJPEGTurboBenchmark" */;
+			buildPhases = (
+				0CD51AE518CE50C600CF46A1 /* Sources */,
+				0CD51AE618CE50C600CF46A1 /* Frameworks */,
+				0CD51AE718CE50C600CF46A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DFJPEGTurboBenchmark;
+			productName = DFJPEGTurboBenchmark;
+			productReference = 0CD51AE918CE50C600CF46A1 /* DFJPEGTurboBenchmark.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0CD51B0C18CE50C600CF46A1 /* DFJPEGTurboBenchmarkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CD51B2118CE50C600CF46A1 /* Build configuration list for PBXNativeTarget "DFJPEGTurboBenchmarkTests" */;
+			buildPhases = (
+				0CD51B0918CE50C600CF46A1 /* Sources */,
+				0CD51B0A18CE50C600CF46A1 /* Frameworks */,
+				0CD51B0B18CE50C600CF46A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CD51B1318CE50C600CF46A1 /* PBXTargetDependency */,
+			);
+			name = DFJPEGTurboBenchmarkTests;
+			productName = DFJPEGTurboBenchmarkTests;
+			productReference = 0CD51B0D18CE50C600CF46A1 /* DFJPEGTurboBenchmarkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0CD51AE118CE50C600CF46A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Alexander Grebenyuk";
+				TargetAttributes = {
+					0CD51B0C18CE50C600CF46A1 = {
+						TestTargetID = 0CD51AE818CE50C600CF46A1;
+					};
+				};
+			};
+			buildConfigurationList = 0CD51AE418CE50C600CF46A1 /* Build configuration list for PBXProject "DFJPEGTurboBenchmark" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0CD51AE018CE50C600CF46A1;
+			productRefGroup = 0CD51AEA18CE50C600CF46A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0CD51AE818CE50C600CF46A1 /* DFJPEGTurboBenchmark */,
+				0CD51B0C18CE50C600CF46A1 /* DFJPEGTurboBenchmarkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0CD51AE718CE50C600CF46A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CD51B0318CE50C600CF46A1 /* Main_iPad.storyboard in Resources */,
+				0CD51B0818CE50C600CF46A1 /* Images.xcassets in Resources */,
+				0CD51B0018CE50C600CF46A1 /* Main_iPhone.storyboard in Resources */,
+				0CD51B4218CE516200CF46A1 /* sample-01.jpeg in Resources */,
+				0CD51AF718CE50C600CF46A1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CD51B0B18CE50C600CF46A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CD51B1918CE50C600CF46A1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CD51AE518CE50C600CF46A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CD51B0618CE50C600CF46A1 /* ViewController.m in Sources */,
+				0CD51B3D18CE510300CF46A1 /* DFBenchmark.m in Sources */,
+				0CD51B3E18CE510300CF46A1 /* DFImageProcessing.m in Sources */,
+				0CD51AFD18CE50C600CF46A1 /* AppDelegate.m in Sources */,
+				0CD51B3F18CE510300CF46A1 /* SDWebImageDecoder.m in Sources */,
+				0CD51AF918CE50C600CF46A1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CD51B0918CE50C600CF46A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CD51B1B18CE50C600CF46A1 /* DFJPEGTurboBenchmarkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CD51B1318CE50C600CF46A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CD51AE818CE50C600CF46A1 /* DFJPEGTurboBenchmark */;
+			targetProxy = 0CD51B1218CE50C600CF46A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0CD51AF518CE50C600CF46A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CD51AF618CE50C600CF46A1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0CD51AFE18CE50C600CF46A1 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CD51AFF18CE50C600CF46A1 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		0CD51B0118CE50C600CF46A1 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CD51B0218CE50C600CF46A1 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		0CD51B1718CE50C600CF46A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CD51B1818CE50C600CF46A1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0CD51B1C18CE50C600CF46A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(inhereted) \"$(SRCROOT)/../DFJPEGTurbo\"";
+			};
+			name = Debug;
+		};
+		0CD51B1D18CE50C600CF46A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(inhereted) \"$(SRCROOT)/../DFJPEGTurbo\"";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0CD51B1F18CE50C600CF46A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DFJPEGTurboBenchmark/DFJPEGTurboBenchmark-Prefix.pch";
+				INFOPLIST_FILE = "DFJPEGTurboBenchmark/DFJPEGTurboBenchmark-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/DFJPEGTurbo-grbeapvjgtzvypdcgljqgzyihiyn/Build/Products/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0CD51B2018CE50C600CF46A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DFJPEGTurboBenchmark/DFJPEGTurboBenchmark-Prefix.pch";
+				INFOPLIST_FILE = "DFJPEGTurboBenchmark/DFJPEGTurboBenchmark-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/DFJPEGTurbo-grbeapvjgtzvypdcgljqgzyihiyn/Build/Products/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0CD51B2218CE50C600CF46A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DFJPEGTurboBenchmark.app/DFJPEGTurboBenchmark";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DFJPEGTurboBenchmark/DFJPEGTurboBenchmark-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DFJPEGTurboBenchmarkTests/DFJPEGTurboBenchmarkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0CD51B2318CE50C600CF46A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DFJPEGTurboBenchmark.app/DFJPEGTurboBenchmark";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DFJPEGTurboBenchmark/DFJPEGTurboBenchmark-Prefix.pch";
+				INFOPLIST_FILE = "DFJPEGTurboBenchmarkTests/DFJPEGTurboBenchmarkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CD51AE418CE50C600CF46A1 /* Build configuration list for PBXProject "DFJPEGTurboBenchmark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CD51B1C18CE50C600CF46A1 /* Debug */,
+				0CD51B1D18CE50C600CF46A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CD51B1E18CE50C600CF46A1 /* Build configuration list for PBXNativeTarget "DFJPEGTurboBenchmark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CD51B1F18CE50C600CF46A1 /* Debug */,
+				0CD51B2018CE50C600CF46A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CD51B2118CE50C600CF46A1 /* Build configuration list for PBXNativeTarget "DFJPEGTurboBenchmarkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CD51B2218CE50C600CF46A1 /* Debug */,
+				0CD51B2318CE50C600CF46A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0CD51AE118CE50C600CF46A1 /* Project object */;
+}

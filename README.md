@@ -28,9 +28,9 @@ UIImage *image = [DFJPEGTurbo imageWithData:jpegData orientation:UIImageOrientat
 
 | Input Image | SDWebImageDecoder | DFJPEGTurbo | Ratio |
 | ----------- | ----------------- | ----------- | ----- |
-| 1024x760, 0.25 compression quality | 201.50 ms | 121.24 ms | 1.66 |
-| 1024x760, 0.50 compression quality | 204.29 ms | 126.75 ms | 1.61 |
-| 1024x760, 0.75 compression quality | 205.21 ms | 151.43 ms | 1.34 |
+| 2048x1536, 0.25 compression quality | 201.50 ms | 121.24 ms | 1.66 |
+| 2048x1536, 0.50 compression quality | 204.29 ms | 126.75 ms | 1.61 |
+| 2048x1536, 0.75 compression quality | 205.21 ms | 151.43 ms | 1.34 |
 
 # Installation
 Current version (0.2.0) can be installed via [Cocoapods](http://cocoapods.org).

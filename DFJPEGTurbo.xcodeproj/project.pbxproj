@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C8AC99918CE46B600265CB1 /* DFImageProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8AC99818CE46B600265CB1 /* DFImageProcessing.m */; };
 		0CFF948118BFC2970027EBBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFF948018BFC2970027EBBA /* Foundation.framework */; };
 		0CFF948618BFC2970027EBBA /* DFJPEGTurbo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CFF948518BFC2970027EBBA /* DFJPEGTurbo.h */; };
 		0CFF948818BFC2970027EBBA /* DFJPEGTurbo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF948718BFC2970027EBBA /* DFJPEGTurbo.m */; };
@@ -18,9 +17,6 @@
 		0CFF949B18BFC2970027EBBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF949918BFC2970027EBBA /* InfoPlist.strings */; };
 		0CFF949D18BFC2970027EBBA /* DFJPEGTurboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF949C18BFC2970027EBBA /* DFJPEGTurboTests.m */; };
 		0CFF94BD18BFC3AA0027EBBA /* libturbojpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFF94B918BFC3AA0027EBBA /* libturbojpeg.a */; };
-		0CFF94C318BFCF350027EBBA /* sample-01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF94C218BFCF350027EBBA /* sample-01.jpeg */; };
-		0CFF94CF18BFCFB80027EBBA /* DFBenchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF94CE18BFCFB80027EBBA /* DFBenchmark.m */; };
-		0CFF94D818BFD0A30027EBBA /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF94D718BFD0A30027EBBA /* SDWebImageDecoder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +48,6 @@
 		0C8AC99318CE461900265CB1 /* jmorecfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jmorecfg.h; sourceTree = "<group>"; };
 		0C8AC99418CE461900265CB1 /* jpeglib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jpeglib.h; sourceTree = "<group>"; };
 		0C8AC99518CE461900265CB1 /* turbojpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = turbojpeg.h; sourceTree = "<group>"; };
-		0C8AC99718CE46B600265CB1 /* DFImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFImageProcessing.h; sourceTree = "<group>"; };
-		0C8AC99818CE46B600265CB1 /* DFImageProcessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFImageProcessing.m; sourceTree = "<group>"; };
-		0C8AC99A18CE46D000265CB1 /* DFImageFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFImageFunctions.h; sourceTree = "<group>"; };
 		0CFF947D18BFC2970027EBBA /* libDFJPEGTurbo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDFJPEGTurbo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFF948018BFC2970027EBBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CFF948418BFC2970027EBBA /* DFJPEGTurbo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DFJPEGTurbo-Prefix.pch"; path = "../Supporting Files/DFJPEGTurbo-Prefix.pch"; sourceTree = "<group>"; };
@@ -67,11 +60,6 @@
 		0CFF949A18BFC2970027EBBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0CFF949C18BFC2970027EBBA /* DFJPEGTurboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFJPEGTurboTests.m; sourceTree = "<group>"; };
 		0CFF94B918BFC3AA0027EBBA /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libturbojpeg.a; sourceTree = "<group>"; };
-		0CFF94C218BFCF350027EBBA /* sample-01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample-01.jpeg"; sourceTree = "<group>"; };
-		0CFF94CD18BFCFB80027EBBA /* DFBenchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFBenchmark.h; sourceTree = "<group>"; };
-		0CFF94CE18BFCFB80027EBBA /* DFBenchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFBenchmark.m; sourceTree = "<group>"; };
-		0CFF94D618BFD0A30027EBBA /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
-		0CFF94D718BFD0A30027EBBA /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,16 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C8AC99618CE46B600265CB1 /* DFImageProcessing */ = {
-			isa = PBXGroup;
-			children = (
-				0C8AC99A18CE46D000265CB1 /* DFImageFunctions.h */,
-				0C8AC99718CE46B600265CB1 /* DFImageProcessing.h */,
-				0C8AC99818CE46B600265CB1 /* DFImageProcessing.m */,
-			);
-			path = DFImageProcessing;
-			sourceTree = "<group>";
-		};
 		0CFF947418BFC2970027EBBA = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				0CFF949C18BFC2970027EBBA /* DFJPEGTurboTests.m */,
-				0CFF94C818BFCF9D0027EBBA /* Third Party */,
 				0CFF949718BFC2970027EBBA /* Supporting Files */,
 			);
 			path = DFJPEGTurboTests;
@@ -171,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				0CFF949818BFC2970027EBBA /* DFJPEGTurboTests-Info.plist */,
-				0CFF94C218BFCF350027EBBA /* sample-01.jpeg */,
 				0CFF949918BFC2970027EBBA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -189,34 +165,6 @@
 			);
 			name = "libturbojpeg-1.3.0";
 			path = libturbojpeg;
-			sourceTree = "<group>";
-		};
-		0CFF94C818BFCF9D0027EBBA /* Third Party */ = {
-			isa = PBXGroup;
-			children = (
-				0CFF94D518BFD0A30027EBBA /* SFWebImageDecoder */,
-				0C8AC99618CE46B600265CB1 /* DFImageProcessing */,
-				0CFF94CC18BFCFB80027EBBA /* DFBenchmark */,
-			);
-			path = "Third Party";
-			sourceTree = "<group>";
-		};
-		0CFF94CC18BFCFB80027EBBA /* DFBenchmark */ = {
-			isa = PBXGroup;
-			children = (
-				0CFF94CD18BFCFB80027EBBA /* DFBenchmark.h */,
-				0CFF94CE18BFCFB80027EBBA /* DFBenchmark.m */,
-			);
-			path = DFBenchmark;
-			sourceTree = "<group>";
-		};
-		0CFF94D518BFD0A30027EBBA /* SFWebImageDecoder */ = {
-			isa = PBXGroup;
-			children = (
-				0CFF94D618BFD0A30027EBBA /* SDWebImageDecoder.h */,
-				0CFF94D718BFD0A30027EBBA /* SDWebImageDecoder.m */,
-			);
-			path = SFWebImageDecoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +237,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CFF94C318BFCF350027EBBA /* sample-01.jpeg in Resources */,
 				0CFF949B18BFC2970027EBBA /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,10 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C8AC99918CE46B600265CB1 /* DFImageProcessing.m in Sources */,
-				0CFF94D818BFD0A30027EBBA /* SDWebImageDecoder.m in Sources */,
 				0CFF949D18BFC2970027EBBA /* DFJPEGTurboTests.m in Sources */,
-				0CFF94CF18BFCFB80027EBBA /* DFBenchmark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
