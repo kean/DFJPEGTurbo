@@ -2,14 +2,15 @@
 
 Objective-C [libjpeg-turbo](http://libjpeg-turbo.virtualgl.org) wrapper (JPEG image codec that uses SIMD instructions (MMX, SSE2, NEON) to accelerate baseline JPEG compression and decompression on x86, x86-64, and ARM systems). `DFJPEGTurbo` uses `libjpeg-turbo` version 1.3.0.
 
-### Requirements
-- iOS 6.0
-
 # Warning
 
-There are two issues with libjpeg-turbo on iOS:
+Do not use this project, it is no longer worth the effort!
+
 1. It's doesn't support ARM64
-2. It's has the same performance as CGContextDrawImage on new CPUs.
+2. It's has the same performance as CGContextDrawImage on recent CPUs.
+
+### Requirements
+- iOS 6.0
 
 # Examples
 
