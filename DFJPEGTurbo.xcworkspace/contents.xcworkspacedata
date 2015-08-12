@@ -4,7 +4,4 @@
    <FileRef
       location = "group:DFJPEGTurbo.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:DFJPEGTurboBenchmark/DFJPEGTurboBenchmark.xcodeproj">
-   </FileRef>
 </Workspace>

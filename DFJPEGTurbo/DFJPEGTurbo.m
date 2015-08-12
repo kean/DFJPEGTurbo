@@ -112,8 +112,8 @@ _scale_for_factor(DFJPEGScale factor) {
     for (int i = 0; i < count; i++) {
         DFJPEGScale factor = factors[i];
         CGFloat factorScale = _scale_for_factor(factor);
-        if (fabsf(scale - factorScale) >=
-            fabsf(scale - _scale_for_factor(outFactor))) {
+        if (fabs(scale - factorScale) >=
+            fabs(scale - _scale_for_factor(outFactor))) {
             continue;
         }
         switch (roundingMode) {
