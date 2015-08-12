@@ -10,29 +10,29 @@
 	<string>DFJPEGTurbo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5301BE9A-45D6-4ACB-BC5D-7A4A20189734</key>
+		<key>3BD29DF5D4D76D01BE6F7ED74EF3E5F3DFAC2FDC</key>
 		<string>https://github.com/kean/DFJPEGTurbo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>DFJPEGTurbo.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5301BE9A-45D6-4ACB-BC5D-7A4A20189734</key>
+		<key>3BD29DF5D4D76D01BE6F7ED74EF3E5F3DFAC2FDC</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/kean/DFJPEGTurbo.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5301BE9A-45D6-4ACB-BC5D-7A4A20189734</string>
+	<string>3BD29DF5D4D76D01BE6F7ED74EF3E5F3DFAC2FDC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5301BE9A-45D6-4ACB-BC5D-7A4A20189734</string>
+			<string>3BD29DF5D4D76D01BE6F7ED74EF3E5F3DFAC2FDC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>DFJPEGTurbo</string>
 		</dict>

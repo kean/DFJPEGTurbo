@@ -55,7 +55,7 @@
 		0CFF948418BFC2970027EBBA /* DFJPEGTurbo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DFJPEGTurbo-Prefix.pch"; path = "../Supporting Files/DFJPEGTurbo-Prefix.pch"; sourceTree = "<group>"; };
 		0CFF948518BFC2970027EBBA /* DFJPEGTurbo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFJPEGTurbo.h; sourceTree = "<group>"; };
 		0CFF948718BFC2970027EBBA /* DFJPEGTurbo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFJPEGTurbo.m; sourceTree = "<group>"; };
-		0CFF948D18BFC2970027EBBA /* DFJPEGTurboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DFJPEGTurboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CFF948D18BFC2970027EBBA /* DFJPEGTurbo Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DFJPEGTurbo Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFF948E18BFC2970027EBBA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0CFF949118BFC2970027EBBA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		0CFF949818BFC2970027EBBA /* DFJPEGTurboTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DFJPEGTurboTests-Info.plist"; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				0CFF947D18BFC2970027EBBA /* libDFJPEGTurbo.a */,
-				0CFF948D18BFC2970027EBBA /* DFJPEGTurboTests.xctest */,
+				0CFF948D18BFC2970027EBBA /* DFJPEGTurbo Tests iOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,7 +213,7 @@
 			);
 			name = "DFJPEGTurbo Tests iOS";
 			productName = DFJPEGTurboTests;
-			productReference = 0CFF948D18BFC2970027EBBA /* DFJPEGTurboTests.xctest */;
+			productReference = 0CFF948D18BFC2970027EBBA /* DFJPEGTurbo Tests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -222,7 +222,7 @@
 		0CFF947518BFC2970027EBBA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Alexander Grebenyuk";
 			};
 			buildConfigurationList = 0CFF947818BFC2970027EBBA /* Build configuration list for PBXProject "DFJPEGTurbo" */;
@@ -298,7 +298,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -336,7 +335,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -399,7 +397,6 @@
 		0CFF94A418BFC2970027EBBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -420,7 +417,6 @@
 		0CFF94A518BFC2970027EBBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
