@@ -23,7 +23,7 @@ UIImage *image = [DFJPEGTurbo imageWithData:jpegData orientation:UIImageOrientat
 
 ## Benchmark
 
-Benchmark on older ARM-based systems (iPhone 4S, iPhone 5C) shows that libjpeg-turbo provides a very noticable performance boost over native CGContextDrawImage. However, libjpeg-turbo underperforms on newer systems (iPhone 6).
+Benchmark on older ARM-based systems (iPhone 4S, iPhone 5C) shows that libjpeg-turbo provides a very noticable performance boost over native CGContextDrawImage. However, libjpeg-turbo underperforms on newer systems (iPhone 6). For benchmark implementation see Demo/DFJPEGTurboBenchmark in a project folder.
 
 ### iPhone 6 (Apple A8)
 
