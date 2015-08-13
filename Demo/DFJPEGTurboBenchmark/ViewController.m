@@ -38,22 +38,22 @@
 
 - (void)_benchmarkWithImage:(UIImage *)image compressionQuality:(CGFloat)compressionQuality {
     NSLog(@"---------------------------------------------------");
-    NSLog(@"Benchmarking JPEG decompression with image size: (%f, %f), compression quality: (%f)", image.size.width * image.scale, image.size.height * image.scale, compressionQuality);
+    NSLog(@"Decoding JPEG with image size (%.0f, %.0f), compression quality: (%.3f)", image.size.width * image.scale, image.size.height * image.scale, compressionQuality);
     NSData *data = UIImageJPEGRepresentation(image, compressionQuality);
-    NSLog(@"SDWebImageDecoder:");
+    printf("SDWebImageDecoder: ");
     dwarf_benchmark(YES, ^{
         @autoreleasepool {
             UIImage *image = [UIImage imageWithData:data];
             __attribute__((unused)) UIImage *decodedImage = [UIImage decodedImageWithImage:image];
         }
     });
-    NSLog(@"AFNetworking");
+    printf("AFNetworking: ");
     dwarf_benchmark(YES, ^{
         @autoreleasepool {
             __attribute__((unused)) UIImage *decodedImage = AFInflatedImageFromResponseWithDataAtScale(nil, data, [UIScreen mainScreen].scale);
         }
     });
-    NSLog(@"DFJPEGTurbo:");
+    printf("DFJPEGTurbo: ");
     dwarf_benchmark(YES, ^{
         @autoreleasepool {
             __attribute__((unused)) UIImage *decodedImage = [DFJPEGTurbo imageWithData:data orientation:UIImageOrientationDown];
