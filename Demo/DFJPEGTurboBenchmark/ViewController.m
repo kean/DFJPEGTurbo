@@ -34,16 +34,16 @@
        image,
        [DFImageProcessing imageWithImage:image scaledToSize:DFSizeScaled(image.size, 1.25f)]];
     for (UIImage *image in images) {
-        [self _benchmarkWithImage:image compressionQuality:0.25f];
+        [self _benchmarkWithImage:image compressionQuality:0.3f];
         [self _benchmarkWithImage:image compressionQuality:0.5f];
-        [self _benchmarkWithImage:image compressionQuality:0.75f];
-        [self _benchmarkWithImage:image compressionQuality:1.f];
+        [self _benchmarkWithImage:image compressionQuality:0.6f];
+        [self _benchmarkWithImage:image compressionQuality:0.8f];
     }
 }
 
 - (void)_benchmarkWithImage:(UIImage *)image compressionQuality:(CGFloat)compressionQuality {
     printf("-------------------------------------------------------\n");
-    printf("Decoding JPEG with image size (%.0f, %.0f), compression quality: (%.3f)\n", image.size.width * image.scale, image.size.height * image.scale, compressionQuality);
+    printf("Decoding JPEG with image size (%.0f, %.0f), compression quality: (%.2f)\n", image.size.width * image.scale, image.size.height * image.scale, compressionQuality);
     NSData *data = UIImageJPEGRepresentation(image, compressionQuality);
     printf("SDWebImageDecoder: ");
     dwarf_benchmark(YES, ^{
