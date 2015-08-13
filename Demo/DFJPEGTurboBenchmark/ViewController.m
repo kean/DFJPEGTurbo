@@ -36,15 +36,19 @@
     for (UIImage *image in images) {
         [self _benchmarkWithImage:image compressionQuality:0.3f];
         [self _benchmarkWithImage:image compressionQuality:0.5f];
-        [self _benchmarkWithImage:image compressionQuality:0.6f];
-        [self _benchmarkWithImage:image compressionQuality:0.8f];
+        [self _benchmarkWithImage:image compressionQuality:0.7f];
+        [self _benchmarkWithImage:image compressionQuality:0.9f];
     }
 }
 
-- (void)_benchmarkWithImage:(UIImage *)image compressionQuality:(CGFloat)compressionQuality {
+- (void)_benchmarkWithImage:(UIImage *)inputImage compressionQuality:(CGFloat)compressionQuality {
     printf("-------------------------------------------------------\n");
-    printf("Decoding JPEG with image size (%.0f, %.0f), compression quality: (%.2f)\n", image.size.width * image.scale, image.size.height * image.scale, compressionQuality);
-    NSData *data = UIImageJPEGRepresentation(image, compressionQuality);
+    printf("Decoding JPEG with image size (%.0f, %.0f), compression quality: (%.2f)\n", inputImage.size.width * inputImage.scale, inputImage.size.height * inputImage.scale, compressionQuality);
+    NSData *data = UIImageJPEGRepresentation(inputImage, compressionQuality);
+    [self _benchmarkWithData:data];
+}
+
+- (void)_benchmarkWithData:(NSData *)data {
     printf("SDWebImageDecoder: ");
     dwarf_benchmark(YES, ^{
         @autoreleasepool {
