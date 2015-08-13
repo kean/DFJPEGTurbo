@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C64158018CE523C00DAA58D /* libDFJPEGTurbo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C64157F18CE523C00DAA58D /* libDFJPEGTurbo.a */; };
 		0CD51AED18CE50C600CF46A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD51AEC18CE50C600CF46A1 /* Foundation.framework */; };
 		0CD51AEF18CE50C600CF46A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD51AEE18CE50C600CF46A1 /* CoreGraphics.framework */; };
 		0CD51AF118CE50C600CF46A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD51AF018CE50C600CF46A1 /* UIKit.framework */; };
@@ -81,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C64158018CE523C00DAA58D /* libDFJPEGTurbo.a in Frameworks */,
 				0CD51AEF18CE50C600CF46A1 /* CoreGraphics.framework in Frameworks */,
 				0CD51AF118CE50C600CF46A1 /* UIKit.framework in Frameworks */,
 				0CD51AED18CE50C600CF46A1 /* Foundation.framework in Frameworks */,
