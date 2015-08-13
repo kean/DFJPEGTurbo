@@ -26,8 +26,13 @@
 
 - (void)_testJPEGTurboPerformance {
     NSString *filePath = [[NSBundle bundleForClass:[self class] ] pathForResource:@"sample-01" ofType:@"jpeg"]; // 2048 x 1536
-    UIImage *image = [UIImage imageWithContentsOfFile:filePath];
-    NSArray *images = @[ [DFImageProcessing imageWithImage:image scaledToSize:DFSizeScaled(image.size, 0.5f)], image, [DFImageProcessing imageWithImage:image scaledToSize:DFSizeScaled(image.size, 2.f)]];
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfFile:filePath] scale:[UIScreen mainScreen].scale];
+    NSArray *images =
+    @[ [DFImageProcessing imageWithImage:image scaledToSize:DFSizeScaled(image.size, 0.1f)],
+       [DFImageProcessing imageWithImage:image scaledToSize:DFSizeScaled(image.size, 0.25f)],
+       [DFImageProcessing imageWithImage:image scaledToSize:DFSizeScaled(image.size, 0.5f)],
+       image,
+       [DFImageProcessing imageWithImage:image scaledToSize:DFSizeScaled(image.size, 1.25f)]];
     for (UIImage *image in images) {
         [self _benchmarkWithImage:image compressionQuality:0.25f];
         [self _benchmarkWithImage:image compressionQuality:0.5f];
@@ -37,8 +42,8 @@
 }
 
 - (void)_benchmarkWithImage:(UIImage *)image compressionQuality:(CGFloat)compressionQuality {
-    NSLog(@"---------------------------------------------------");
-    NSLog(@"Decoding JPEG with image size (%.0f, %.0f), compression quality: (%.3f)", image.size.width * image.scale, image.size.height * image.scale, compressionQuality);
+    printf("-------------------------------------------------------\n");
+    printf("Decoding JPEG with image size (%.0f, %.0f), compression quality: (%.3f)\n", image.size.width * image.scale, image.size.height * image.scale, compressionQuality);
     NSData *data = UIImageJPEGRepresentation(image, compressionQuality);
     printf("SDWebImageDecoder: ");
     dwarf_benchmark(YES, ^{
