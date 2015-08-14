@@ -10,7 +10,6 @@ Pod::Spec.new do |spec|
         :git => 'https://github.com/kean/DFJPEGTurbo.git', 
         :tag => 'v0.1.0'
     }
-    spec.public_header_files = 'DFJPEGTurbo/DFJPEGTurbo.h'
     spec.source_files = 'DFJPEGTurbo/**/*.{h,m}'
     spec.vendored_libraries = 'DFJPEGTurbo/libturbojpeg/libturbojpeg.a'
     spec.requires_arc = true
