@@ -21,7 +21,7 @@
     NSString *filePath = [[NSBundle bundleForClass:[self class] ] pathForResource:@"sample-01" ofType:@"jpeg"];
     NSData *data = [NSData dataWithContentsOfFile:filePath]; // 2048 x 1536
     
-    UIImage *image = [DFJPEGTurbo imageWithData:data];
+    UIImage *image = [DFJPEGTurboImageDecoder imageWithData:data];
     XCTAssertTrue(image.size.width == 1024.f);
     XCTAssertTrue(image.size.height == 768.f);
 }
@@ -43,37 +43,37 @@
 }
 
 - (void)testScalingFactors {
-    Method originalImpl = class_getClassMethod([DFJPEGTurbo class], @selector(scalingFactors:));
+    Method originalImpl = class_getClassMethod([DFJPEGTurboImageDecoder class], @selector(scalingFactors:));
     Method mockImpl = class_getInstanceMethod([self class], @selector(_mockedScalingFactors:));
     method_exchangeImplementations(originalImpl, mockImpl);
     
     {
-        DFJPEGScale scale = [DFJPEGTurbo scalingFactorForScale:0.25f roundingMode:DFJPEGRoundingModeNearest];
+        DFJPEGScale scale = [DFJPEGTurboImageDecoder scalingFactorForScale:0.25f roundingMode:DFJPEGRoundingModeNearest];
         XCTAssertTrue(scale.numenator == 1 && scale.denominator == 4);
     }
     
     {
-        DFJPEGScale scale = [DFJPEGTurbo scalingFactorForScale:0.25f roundingMode:DFJPEGRoundingModeGreaterOrEqual];
+        DFJPEGScale scale = [DFJPEGTurboImageDecoder scalingFactorForScale:0.25f roundingMode:DFJPEGRoundingModeGreaterOrEqual];
         XCTAssertTrue(scale.numenator == 1 && scale.denominator == 4);
     }
     
     {
-        DFJPEGScale scale = [DFJPEGTurbo scalingFactorForScale:0.25f roundingMode:DFJPEGRoundingModeLessOrEqual];
+        DFJPEGScale scale = [DFJPEGTurboImageDecoder scalingFactorForScale:0.25f roundingMode:DFJPEGRoundingModeLessOrEqual];
         XCTAssertTrue(scale.numenator == 1 && scale.denominator == 4);
     }
     
     {
-        DFJPEGScale scale = [DFJPEGTurbo scalingFactorForScale:0.22f roundingMode:DFJPEGRoundingModeNearest];
+        DFJPEGScale scale = [DFJPEGTurboImageDecoder scalingFactorForScale:0.22f roundingMode:DFJPEGRoundingModeNearest];
         XCTAssertTrue(scale.numenator == 1 && scale.denominator == 4);
     }
     
     {
-        DFJPEGScale scale = [DFJPEGTurbo scalingFactorForScale:0.22f roundingMode:DFJPEGRoundingModeGreaterOrEqual];
+        DFJPEGScale scale = [DFJPEGTurboImageDecoder scalingFactorForScale:0.22f roundingMode:DFJPEGRoundingModeGreaterOrEqual];
         XCTAssertTrue(scale.numenator == 1 && scale.denominator == 4);
     }
     
     {
-        DFJPEGScale scale = [DFJPEGTurbo scalingFactorForScale:0.22f roundingMode:DFJPEGRoundingModeLessOrEqual];
+        DFJPEGScale scale = [DFJPEGTurboImageDecoder scalingFactorForScale:0.22f roundingMode:DFJPEGRoundingModeLessOrEqual];
         XCTAssertTrue(scale.numenator == 1 && scale.denominator == 8);
     }
     
@@ -84,7 +84,7 @@
     NSString *filePath = [[NSBundle bundleForClass:[self class] ] pathForResource:@"sample-01" ofType:@"jpeg"];
     NSData *data = [NSData dataWithContentsOfFile:filePath]; // 2048 x 1536
     
-    UIImage *image = [DFJPEGTurbo imageWithData:data orientation:UIImageOrientationDown scale:0.5f rounding:DFJPEGRoundingModeNearest];
+    UIImage *image = [DFJPEGTurboImageDecoder imageWithData:data orientation:UIImageOrientationDown scale:0.5f rounding:DFJPEGRoundingModeNearest];
     XCTAssertTrue(image.size.width == 512.f);
     XCTAssertTrue(image.size.height == 384.f);
 }

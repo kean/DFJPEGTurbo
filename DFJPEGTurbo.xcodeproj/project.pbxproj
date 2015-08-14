@@ -11,7 +11,6 @@
 		0C49D6A31B7E1C52000B11B0 /* DFJPEGTurboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C49D6A21B7E1C52000B11B0 /* DFJPEGTurboTests.m */; };
 		0C49D6AB1B7E1CED000B11B0 /* DFJPEGTurbo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C49D6AA1B7E1CED000B11B0 /* DFJPEGTurbo-Info.plist */; };
 		0C49D6AC1B7E1D4A000B11B0 /* DFJPEGTurbo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CFF948518BFC2970027EBBA /* DFJPEGTurbo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C49D6AD1B7E1D4F000B11B0 /* DFJPEGTurbo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF948718BFC2970027EBBA /* DFJPEGTurbo.m */; };
 		0C49D6AE1B7E1D55000B11B0 /* jconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8AC99118CE461900265CB1 /* jconfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C49D6AF1B7E1D55000B11B0 /* jerror.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8AC99218CE461900265CB1 /* jerror.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C49D6B01B7E1D55000B11B0 /* jmorecfg.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8AC99318CE461900265CB1 /* jmorecfg.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,6 +19,8 @@
 		0C49D6B31B7E1D55000B11B0 /* libturbojpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFF94B918BFC3AA0027EBBA /* libturbojpeg.a */; };
 		0C49D6B41B7E1D72000B11B0 /* libturbojpeg.a in Resources */ = {isa = PBXBuildFile; fileRef = 0CFF94B918BFC3AA0027EBBA /* libturbojpeg.a */; };
 		0C49D6B71B7E1E1A000B11B0 /* sample-01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0C49D6B61B7E1E1A000B11B0 /* sample-01.jpeg */; };
+		0C7637ED1B7E2AC8006E2535 /* DFJPEGTurboImageDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C7637EB1B7E2AC8006E2535 /* DFJPEGTurboImageDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C7637EE1B7E2AC8006E2535 /* DFJPEGTurboImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7637EC1B7E2AC8006E2535 /* DFJPEGTurboImageDecoder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,8 @@
 		0C49D6A21B7E1C52000B11B0 /* DFJPEGTurboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFJPEGTurboTests.m; sourceTree = "<group>"; };
 		0C49D6AA1B7E1CED000B11B0 /* DFJPEGTurbo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DFJPEGTurbo-Info.plist"; sourceTree = "<group>"; };
 		0C49D6B61B7E1E1A000B11B0 /* sample-01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample-01.jpeg"; sourceTree = "<group>"; };
+		0C7637EB1B7E2AC8006E2535 /* DFJPEGTurboImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFJPEGTurboImageDecoder.h; sourceTree = "<group>"; };
+		0C7637EC1B7E2AC8006E2535 /* DFJPEGTurboImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFJPEGTurboImageDecoder.m; sourceTree = "<group>"; };
 		0C8AC99118CE461900265CB1 /* jconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jconfig.h; sourceTree = "<group>"; };
 		0C8AC99218CE461900265CB1 /* jerror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jerror.h; sourceTree = "<group>"; };
 		0C8AC99318CE461900265CB1 /* jmorecfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jmorecfg.h; sourceTree = "<group>"; };
@@ -46,7 +49,6 @@
 		0C8AC99518CE461900265CB1 /* turbojpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = turbojpeg.h; sourceTree = "<group>"; };
 		0CFF948018BFC2970027EBBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CFF948518BFC2970027EBBA /* DFJPEGTurbo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFJPEGTurbo.h; sourceTree = "<group>"; };
-		0CFF948718BFC2970027EBBA /* DFJPEGTurbo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFJPEGTurbo.m; sourceTree = "<group>"; };
 		0CFF948E18BFC2970027EBBA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0CFF949118BFC2970027EBBA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		0CFF94B918BFC3AA0027EBBA /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libturbojpeg.a; sourceTree = "<group>"; };
@@ -132,7 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				0CFF948518BFC2970027EBBA /* DFJPEGTurbo.h */,
-				0CFF948718BFC2970027EBBA /* DFJPEGTurbo.m */,
+				0C7637EB1B7E2AC8006E2535 /* DFJPEGTurboImageDecoder.h */,
+				0C7637EC1B7E2AC8006E2535 /* DFJPEGTurboImageDecoder.m */,
 				0CFF94A618BFC3AA0027EBBA /* libturbojpeg */,
 			);
 			path = DFJPEGTurbo;
@@ -171,6 +174,7 @@
 				0C49D6B01B7E1D55000B11B0 /* jmorecfg.h in Headers */,
 				0C49D6AC1B7E1D4A000B11B0 /* DFJPEGTurbo.h in Headers */,
 				0C49D6B21B7E1D55000B11B0 /* turbojpeg.h in Headers */,
+				0C7637ED1B7E2AC8006E2535 /* DFJPEGTurboImageDecoder.h in Headers */,
 				0C49D6AE1B7E1D55000B11B0 /* jconfig.h in Headers */,
 				0C49D6B11B7E1D55000B11B0 /* jpeglib.h in Headers */,
 			);
@@ -275,7 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C49D6AD1B7E1D4F000B11B0 /* DFJPEGTurbo.m in Sources */,
+				0C7637EE1B7E2AC8006E2535 /* DFJPEGTurboImageDecoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +494,7 @@
 				0C49D6A61B7E1C52000B11B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C49D6A71B7E1C52000B11B0 /* Build configuration list for PBXNativeTarget "DFJPEGTurboTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +503,7 @@
 				0C49D6A91B7E1C52000B11B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CFF947818BFC2970027EBBA /* Build configuration list for PBXProject "DFJPEGTurbo" */ = {
 			isa = XCConfigurationList;

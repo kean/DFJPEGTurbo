@@ -23,88 +23,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-//! Project version number for DFJPEGTurbo.
 FOUNDATION_EXPORT double DFJPEGTurboVersionNumber;
-
-//! Project version string for DFJPEGTurbo.
 FOUNDATION_EXPORT const unsigned char DFJPEGTurboVersionString[];
+
+#import "DFJPEGTurboImageDecoder.h"
 
 #import "jconfig.h"
 #import "jerror.h"
 #import "jmorecfg.h"
 #import "jpeglib.h"
 #import "turbojpeg.h"
-
-typedef NS_ENUM(NSUInteger, DFJPEGRoundingMode) {
-    /* Pick the closest scale. */
-    DFJPEGRoundingModeNearest,
-    /* Pick the closest scale that is greater than or equal to the input scale. */
-    DFJPEGRoundingModeGreaterOrEqual,
-    /* Pick the closest scale that is less than or equal to the input scale. */
-    DFJPEGRoundingModeLessOrEqual
-};
-
-typedef struct {
-    NSUInteger numenator;
-    NSUInteger denominator;
-} DFJPEGScale;
-
-static inline DFJPEGScale
-DFJPEGScaleMake(NSUInteger numenator, NSUInteger denominator) {
-    return (DFJPEGScale){ .numenator = numenator, .denominator = denominator };
-}
-
-/*! Objective-C libjpeg-turbo wrapper.
- */
-@interface DFJPEGTurbo : NSObject
-
-#pragma mark - Decompression
-
-/*! Decompresses JPEG image data.
- @param data JPEG image data.
- @param orientation Output image orientation.
- @param scale Scale to be apply to the image during decompression.
- @warning Scale must be implemented by libjpeg-turbo which supports only several predifined scaling factors (1/1, 1/2, 1/4 etc). In other case the image is going to be cropped.
- */
-+ (UIImage *)imageWithData:(NSData *)data
-               orientation:(UIImageOrientation)orientation
-                     scale:(DFJPEGScale)scale;
-
-/*! Decompresses JPEG image data.
- @param data JPEG image data.
- @param orientation Output image orientation.
- @param scale Scale to be apply to the image during decompression.
- @param rounding libjpeg-turbo only supports several predefined scaling factors (1/1, 1/2, 1/4 etc). The rounding mode is a way to specify which one to pick if the input scale is not on the list.
- */
-+ (UIImage *)imageWithData:(NSData *)data
-               orientation:(UIImageOrientation)orientation
-                     scale:(CGFloat)scale
-                  rounding:(DFJPEGRoundingMode)rounding;
-
-/*! Decompresses JPEG image data.
- @param data JPEG image data.
- @param orientation Image orientation of image data.
- */
-+ (UIImage *)imageWithData:(NSData *)data;
-
-/*! Decompresses JPEG image data.
- @param data JPEG image data.
- @param orientation Image orientation of image data.
- */
-+ (UIImage *)imageWithData:(NSData *)data orientation:(UIImageOrientation)orientation;
-
-#pragma mark - Scaling Factors
-
-/*! Returns the scaling factors closest to the input scale. libjpeg-turbo only supports several predefined scaling factors (1/1, 1/2, 1/4 etc).
- @param scale Scale to be apply to the image during decompression.
- @param rounding The rounding mode is a way to specify which predifined scaling factor to pick if the input scale is not on the list.
- */
-+ (DFJPEGScale)scalingFactorForScale:(CGFloat)scale roundingMode:(DFJPEGRoundingMode)roundingMode;
-
-/*! Returns the list of all scaling factors provided by libjpeg-turbo.
- @return pointer to a static C array.
- */
-+ (DFJPEGScale *)scalingFactors:(NSUInteger *)count;
-
-@end
-

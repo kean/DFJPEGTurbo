@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DFJPEGTurbo.h"
+#import "DFJPEGTurboImageDecoder.h"
 #import "turbojpeg.h"
 
 static void
@@ -38,7 +38,7 @@ _scale_for_factor(DFJPEGScale factor) {
     return factor.numenator / ((CGFloat)factor.denominator);
 }
 
-@implementation DFJPEGTurbo
+@implementation DFJPEGTurboImageDecoder
 
 #pragma mark - Decompression
 
