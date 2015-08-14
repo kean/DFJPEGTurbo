@@ -46,7 +46,7 @@
     Method originalImpl = class_getClassMethod([DFJPEGTurbo class], @selector(scalingFactors:));
     Method mockImpl = class_getInstanceMethod([self class], @selector(_mockedScalingFactors:));
     method_exchangeImplementations(originalImpl, mockImpl);
-
+    
     {
         DFJPEGScale scale = [DFJPEGTurbo scalingFactorForScale:0.25f roundingMode:DFJPEGRoundingModeNearest];
         XCTAssertTrue(scale.numenator == 1 && scale.denominator == 4);
