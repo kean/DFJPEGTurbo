@@ -15,7 +15,7 @@ Objective-C [libjpeg-turbo](http://www.libjpeg-turbo.org) wrapper (JPEG image co
 #### Decompressing JPEG data
 ```objective-c
 NSData *jpegData;
-UIImage *image = [DFJPEGTurbo imageWithData:data];
+UIImage *image = [DFJPEGTurboImageDecoder imageWithData:data];
 ```
 
 #### Decompressing JPEG data with one of the libjpeg-turbo scale factors
@@ -23,10 +23,10 @@ UIImage *image = [DFJPEGTurbo imageWithData:data];
 NSData *jpegData;
 // Scale must be implemented by libjpeg-turbo which supports only several scaling factors (1/1, 1/2, 1/4 etc).
 DFJPEGScale scale = DFJPEGScaleMake(1, 2); // 0.5 scale
-UIImage *image = [DFJPEGTurbo imageWithData:jpegData orientation:UIImageOrientationDown scale:scale];
+UIImage *image = [DFJPEGTurboImageDecoder imageWithData:jpegData orientation:UIImageOrientationDown scale:scale];
 ```
 
-## Benchmark
+## Benchmark (Baseline JPEG)
 
 Benchmark on older ARM-based systems (iPhone 4S, iPhone 5C) shows that libjpeg-turbo provides a very noticable performance boost over native CGContextDrawImage. However, libjpeg-turbo underperforms on newer systems (iPhone 6). For benchmark implementation see Demo/DFJPEGTurboBenchmark in a project folder.
 
