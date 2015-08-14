@@ -1,5 +1,10 @@
 <h1 align="center">DFJPEGTurbo</h1>
 
+<p align="center">
+<a href="https://cocoapods.org/pods/DFJPEGTurbo"><img src="http://img.shields.io/cocoapods/v/DFJPEGTurbo.svg?style=flat"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
+</p>
+
 Objective-C [libjpeg-turbo](http://www.libjpeg-turbo.org) wrapper (JPEG image codec that uses SIMD instructions (MMX, SSE2, NEON) to accelerate baseline JPEG compression and decompression on x86, x86-64, and ARM systems). `DFJPEGTurbo` uses `libjpeg-turbo` version 1.4.1, which now includes arm64 support.
 
 ## Requirements
