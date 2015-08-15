@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name = 'DFJPEGTurbo'
-    spec.version = '0.2.0'
+    spec.version = '0.2.1'
     spec.summary = 'Objective-C libjpeg-turbo wrapper with baseline and progressive JPEG support'
     spec.ios.deployment_target = '6.0'
     spec.license = 'MIT'
