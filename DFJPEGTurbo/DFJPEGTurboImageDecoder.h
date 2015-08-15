@@ -52,7 +52,7 @@ DFJPEGScaleMake(int numenator, int denominator) {
  @param data JPEG image data.
  @param orientation Output image orientation.
  @param scale Scale to be apply to the image during decompression.
- @warning Scale must be implemented by libjpeg-turbo which supports only several predifined scaling factors (1/1, 1/2, 1/4 etc). In other case the image is going to be cropped.
+ @warning Scale must be implemented by libjpeg-turbo which supports only several predefined scaling factors (1/1, 1/2, 1/4 etc). In other case the image is going to be cropped.
  */
 + (UIImage *)imageWithData:(NSData *)data
                orientation:(UIImageOrientation)orientation
@@ -69,9 +69,8 @@ DFJPEGScaleMake(int numenator, int denominator) {
                      scale:(CGFloat)scale
                   rounding:(DFJPEGRoundingMode)rounding;
 
-/*! Decompresses JPEG image data.
+/*! Decompresses JPEG image data. Image orientation is retrieved from EXIF.
  @param data JPEG image data.
- @param orientation Image orientation of image data.
  */
 + (UIImage *)imageWithData:(NSData *)data;
 
@@ -81,11 +80,17 @@ DFJPEGScaleMake(int numenator, int denominator) {
  */
 + (UIImage *)imageWithData:(NSData *)data orientation:(UIImageOrientation)orientation;
 
+#pragma mark - EXIF
+
+/*! Returns image orientation from an EXIF associated with a given JPEG data.
+ */
++ (UIImageOrientation)imageOrientationForData:(NSData *)data;
+
 #pragma mark - Scaling Factors
 
 /*! Returns the scaling factors closest to the input scale. libjpeg-turbo only supports several predefined scaling factors (1/1, 1/2, 1/4 etc).
  @param scale Scale to be apply to the image during decompression.
- @param rounding The rounding mode is a way to specify which predifined scaling factor to pick if the input scale is not on the list.
+ @param rounding The rounding mode is a way to specify which predefined scaling factor to pick if the input scale is not on the list.
  */
 + (DFJPEGScale)scalingFactorForScale:(CGFloat)scale roundingMode:(DFJPEGRoundingMode)roundingMode;
 

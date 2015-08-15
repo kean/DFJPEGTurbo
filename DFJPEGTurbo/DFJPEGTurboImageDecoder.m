@@ -22,6 +22,7 @@
 
 #import "DFJPEGTurboImageDecoder.h"
 #import "turbojpeg.h"
+#import <ImageIO/ImageIO.h>
 
 static void
 _dwarf_jpeg_release_data(void *info, const void *data, size_t size) {
@@ -43,7 +44,8 @@ _scale_for_factor(DFJPEGScale factor) {
 #pragma mark - Decompression
 
 + (UIImage *)imageWithData:(NSData *)data {
-    return [self imageWithData:data orientation:UIImageOrientationUp];
+    UIImageOrientation orientation = [self imageOrientationForData:data];
+    return [self imageWithData:data orientation:orientation];
 }
 
 + (UIImage *)imageWithData:(NSData *)data orientation:(UIImageOrientation)orientation {
@@ -61,7 +63,7 @@ _scale_for_factor(DFJPEGScale factor) {
 + (UIImage *)imageWithData:(NSData *)data
                orientation:(UIImageOrientation)orientation
                      scale:(DFJPEGScale)scale {
-    if (!data) {
+    if (!data.length) {
         return nil;
     }
     
@@ -107,6 +109,40 @@ _scale_for_factor(DFJPEGScale factor) {
     tjDestroy(decoder);
     
     return decompressedImage;
+}
+
+#pragma mark - EXIF
+
++ (UIImageOrientation)imageOrientationForData:(NSData *)data {
+    UIImageOrientation orientation = UIImageOrientationUp;
+    if (!data.length) {
+        return UIImageOrientationUp;
+    }
+    CGImageSourceRef imageSourceRef = CGImageSourceCreateWithData((__bridge CFDataRef)data, nil);
+    if (imageSourceRef) {
+        CFDictionaryRef dictRef = CGImageSourceCopyPropertiesAtIndex(imageSourceRef, 0, NULL);
+        if (dictRef) {
+            NSNumber *exifOrientation = (__bridge NSNumber *) CFDictionaryGetValue(dictRef, kCGImagePropertyOrientation);
+            orientation = [self _imageOrientationForExifOrientation:exifOrientation.intValue];
+            CFRelease(dictRef);
+        }
+        CFRelease(imageSourceRef);
+    }
+    return orientation;
+}
+
++ (UIImageOrientation)_imageOrientationForExifOrientation:(int)exifOrientation {
+    switch (exifOrientation) {
+        case 1: return UIImageOrientationUp;
+        case 2: return UIImageOrientationUpMirrored;
+        case 3: return UIImageOrientationDown;
+        case 4: return UIImageOrientationDownMirrored;
+        case 5: return UIImageOrientationLeftMirrored;
+        case 6: return UIImageOrientationRight;
+        case 7: return UIImageOrientationRightMirrored;
+        case 8: return UIImageOrientationLeft;
+        default: return UIImageOrientationUp;
+    }
 }
 
 #pragma mark - Scaling Factors

@@ -65,7 +65,7 @@
     printf("DFJPEGTurbo: ");
     dwarf_benchmark(YES, ^{
         @autoreleasepool {
-            __attribute__((unused)) UIImage *decodedImage = [DFJPEGTurbo imageWithData:data orientation:UIImageOrientationDown];
+            __attribute__((unused)) UIImage *decodedImage = [DFJPEGTurboImageDecoder imageWithData:data orientation:UIImageOrientationDown];
         }
     });
 }
