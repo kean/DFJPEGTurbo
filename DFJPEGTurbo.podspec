@@ -1,14 +1,14 @@
 Pod::Spec.new do |spec|
     spec.name = 'DFJPEGTurbo'
-    spec.version = '0.1.0'
-    spec.ios.deployment_target = '5.0'
+    spec.version = '0.2.0'
+    spec.summary = 'Objective-C libjpeg-turbo wrapper with baseline and progressive JPEG support'
+    spec.ios.deployment_target = '6.0'
     spec.license = 'MIT'
     spec.homepage = 'https://github.com/kean/DFJPEGTurbo'
     spec.authors = 'Alexander Grebenyuk'
-    spec.summary = 'Objective-C libjpeg-turbo wrapper'
     spec.source = {
         :git => 'https://github.com/kean/DFJPEGTurbo.git', 
-        :tag => 'v0.1.0'
+        :tag => s.version.to_s
     }
     spec.source_files = 'DFJPEGTurbo/**/*.{h,m}'
     spec.vendored_libraries = 'DFJPEGTurbo/libturbojpeg/libturbojpeg.a'
