@@ -33,12 +33,12 @@ typedef NS_ENUM(NSUInteger, DFJPEGRoundingMode) {
 };
 
 typedef struct {
-    NSUInteger numenator;
-    NSUInteger denominator;
+    int numenator;
+    int denominator;
 } DFJPEGScale;
 
 static inline DFJPEGScale
-DFJPEGScaleMake(NSUInteger numenator, NSUInteger denominator) {
+DFJPEGScaleMake(int numenator, int denominator) {
     return (DFJPEGScale){ .numenator = numenator, .denominator = denominator };
 }
 
