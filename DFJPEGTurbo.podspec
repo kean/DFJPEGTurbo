@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
     spec.authors = 'Alexander Grebenyuk'
     spec.source = {
         :git => 'https://github.com/kean/DFJPEGTurbo.git', 
-        :tag => s.version.to_s
+        :tag => spec.version.to_s
     }
     spec.source_files = 'DFJPEGTurbo/**/*.{h,m}'
     spec.vendored_libraries = 'DFJPEGTurbo/libturbojpeg/libturbojpeg.a'
