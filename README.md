@@ -1,4 +1,4 @@
-<h1 align="center">DFJPEGTurbo</h1>
+<h1 align="center">DFJPEGTurbo (Deprecated)</h1>
 
 <p align="center">
 <a href="https://cocoapods.org/pods/DFJPEGTurbo"><img src="http://img.shields.io/cocoapods/v/DFJPEGTurbo.svg?style=flat"></a>
